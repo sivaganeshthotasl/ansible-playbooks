@@ -7,7 +7,7 @@
 
   tasks:
     - name: Hostname
-      command: Hostname
+      command: hostname
       register: HOSTNAME_OUTPUT
 
     - name: printing Hostname
