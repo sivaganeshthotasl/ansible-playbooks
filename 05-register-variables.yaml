@@ -2,8 +2,11 @@
 
 - name: check uptime
   hosts: servers
-  command: uptime
-  register: UPTIME_OUTPUT
+  
+  
+  tasks:
+    command: uptime
+    register: UPTIME_OUTPUT
 
 
 - debug:
