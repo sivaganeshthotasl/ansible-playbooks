@@ -11,6 +11,6 @@
 
     - name: Print uptime
       debug:
-        var: UPTIME_OUTPUT.std.out
+        var: UPTIME_OUTPUT.stdout
 
 
