@@ -1,0 +1,27 @@
+---
+
+
+- name: Variables
+  hosts: servers
+
+
+  tasks:
+  - name: Intruduction Variables
+    vars:
+      - NAME: Siva Ganesh Thota SL
+        ROLE: Devops With AWS Engineer
+        CITY: SINGAPORE
+
+
+  - name: Printing Name
+    debug:
+      msg: "My Name is {{ NAME }}"
+
+
+  - name: Printing Name
+    debug:
+      msg: "I am {{ ROLE }}"
+
+  - name: Printing Company
+    debug:
+      msg: "I live in {{ CITY }}"
