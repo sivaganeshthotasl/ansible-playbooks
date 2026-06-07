@@ -1,0 +1,9 @@
+---
+
+- name: check uptime
+  command: uptime
+  register: UPTIME_OUTPUT
+
+
+- debug:
+  var: UPTIME_OUTPUT
