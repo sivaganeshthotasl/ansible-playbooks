@@ -7,7 +7,7 @@
 
   tasks:
     - name: Run df command
-      command: df -h
+      command: df -hT
       register: DISK
 
     - name: Printing disk Usage
