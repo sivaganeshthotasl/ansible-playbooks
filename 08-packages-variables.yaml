@@ -1,10 +1,10 @@
 # ---
 
- - name: Variables
-   hosts: servers
+- name: Package list
+  hosts: servers
 
 
-   vars:
+  vars:
      PACKAGE:
         - nginx
         - git
@@ -12,10 +12,10 @@
         - mysql
 
 
-   task:
+  task:
      - name: Listing Packages
        debug:
-        msg: "{{PACKAGE}}"
+          msg: "{{PACKAGE}}"
 
 
 
