@@ -1,0 +1,20 @@
+---
+
+- name: Mutliple Variables
+  hosts: servers
+
+
+
+  vars:
+    NAME: Siva Ganesh Thota SL
+    ROLE: DevOps with AWS
+    CITY: Bengaluru
+
+
+
+
+  tasks:
+    debug:
+      msg: "My Name is {{ NAME }} Work as {{ ROLE }} in {{ CITY }}"
+
+      
