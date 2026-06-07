@@ -11,9 +11,9 @@
 
 
   tasks:
-    name: Printing Multiple Variables
-    debug:
-      msg: "My Name is {{ NAME }} Work as {{ SKILLS }} in {{ COMPANY }}"
+    - name: Printing Multiple Variables
+      debug:
+        msg: "My Name is {{ NAME }} Work as {{ SKILLS }} in {{ COMPANY }}"
 
 
 
