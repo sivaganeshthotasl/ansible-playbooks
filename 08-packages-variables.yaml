@@ -1,21 +1,21 @@
 ---
 
-  - name: Package list
-    hosts: servers
+- name: Package list
+  hosts: servers
 
 
-    vars:
-      PACKAGE:
-        - nginx
-        - git
-        - dockers
-        - mysql
+  vars:
+    PACKAGE:
+      - nginx
+      - git
+      - dockers
+      - mysql
 
 
-    task:
-      - name: Listing Packages
-        debug:
-          msg: "{{PACKAGE}}"
+  task:
+    - name: Listing Packages
+      debug:
+        msg: "{{PACKAGE}}"
 
 
 
