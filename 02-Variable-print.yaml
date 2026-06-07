@@ -23,17 +23,9 @@
   tasks:
     - name: Print Self Intruduction
       debug:
-        msg: "My name is {{ Name }}" 
-  tasks:
-    - name: Print Skills
-      debug:
-        msg: "My Skills are {{ SKILLS }}"
+        msg: "My name is {{ Name }} Aorking as {{ SKILLS }} in {{ COMPANY }}" 
+  
 
-  tasks:
-    - name: Print Company
-      debug:
-        msg: "My COMPANY IS {{ COMPANY }}"
-        
       
 
 
