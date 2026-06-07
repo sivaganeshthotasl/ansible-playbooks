@@ -1,6 +1,6 @@
 ---
 
-- name: Listing Packages
+- name: Variables
   hosts: servers
 
 
