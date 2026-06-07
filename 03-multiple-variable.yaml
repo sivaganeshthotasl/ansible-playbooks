@@ -1,16 +1,19 @@
 ---
 
-- name: Self Intruduction
+- name: Multiple Variables
   hosts: servers
 
 
   vars:
-    Name: Siva Ganesh Thota SL
-    Skills: DevOps with AWS
-    Company: Volvo
+    NAME: Siva Ganesh Thota SL
+    SKILLS: Devops With AWS
+    COMPANY: Benz
+
 
   tasks:
-    - name: Print Self Intruduction
-      debug:
-        msg: "My name is {{ Name }} work as {{ Skills }} in {{ Company }}"
+    NAME: Printing Multiple Variables
+    debug:
+      msg: "My Name is {{ NAME }} Work as {{ SKILLS }} in {{ COMPANY }}"
+
+      
 
