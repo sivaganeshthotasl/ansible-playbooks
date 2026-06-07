@@ -14,4 +14,4 @@
   tasks:
     - name: Printing Packages list
       debug:
-        msg: "Listing {{ PACKAGES }}"
+        vars: PACKAGES
