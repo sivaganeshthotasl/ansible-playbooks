@@ -1,6 +1,6 @@
 ---
 - name: Variables Demo
-  hosts: localhost
+  hosts: servers
 
   vars:
     NAME: Siva
