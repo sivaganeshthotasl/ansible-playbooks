@@ -1,8 +1,16 @@
 ---
 
-- name: Check uptime
-  command: uptime
-  register: UPTIME_OUTPUT  
+- name: Register Variable example
+  hosts: servers
 
-- debug:
-  var: UPTIME_OUTPUT.stdout 
+
+
+  tasks:  
+    - name: check uptime
+      command: uptime
+      register: UPTIME_OUTPUT
+
+
+    - name: print uptime
+      debug:
+        var: UPTIME_OUTPUT.stdout 
