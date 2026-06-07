@@ -4,8 +4,8 @@
   hosts: servers
 
 
-     vars:
-     PACKAGE:
+  vars:
+    PACKAGE:
        - nginx
        - git
        - dockers
