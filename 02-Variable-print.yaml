@@ -1,14 +1,12 @@
 ---
-
-- name: variable demo
+- name: Variables Demo
   hosts: servers
-  
+  gather_facts: false
+
   vars:
-   name: Siva
-
-
+    NAME: Siva
 
   tasks:
-    -name: Print Variables
-     debug: 
-        msg: "My Name is {{ name }}"
+    - name: Print variable
+      debug:
+        msg: "My name is {{ NAME }}"
