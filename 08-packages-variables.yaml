@@ -1,38 +1,38 @@
 # ---
 
-# - name: Variables
+ - name: Variables
+   hosts: servers
+
+
+   vars:
+     PACKAGE:
+        - nginx
+        - git
+        - dockers
+        - mysql
+
+
+   task:
+     - name: Listing Packages
+       debug:
+        msg: "{{PACKAGE}}"
+
+
+
+# ---
+
+# - name: Package list
 #   hosts: servers
 
 
 #   vars:
-#     PACKAGE:
-#        - nginx
-#        - git
-#        - dockers
-#        - mysql
+#     PACKAGES:
+#       - nginx
+#       - git
+#       - mysql
 
 
-#   task:
-#     - name: Listing Packages
+#   tasks:
+#     - name: Printing Packages list
 #       debug:
-#       msg: "{{ PACKAGE }}"
-
-
-
----
-
-- name: Package list
-  hosts: servers
-
-
-  vars:
-    PACKAGES:
-      - nginx
-      - git
-      - mysql
-
-
-  tasks:
-    - name: Printing Packages list
-      debug:
-        msg: "{{PACKAGES}}"
+#         msg: "{{PACKAGES}}"
