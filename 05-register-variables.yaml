@@ -1,13 +1,8 @@
 ---
 
-- name: check uptime
-  hosts: servers
-  
-  
-  tasks:
-    command: uptime
-    register: UPTIME_OUTPUT
-
+- name: Check uptime
+  command: uptime
+  register: UPTIME_OUTPUT  
 
 - debug:
-    var: UPTIME_OUTPUT.stdout
+  var: UPTIME_OUTPUT.stdout 
