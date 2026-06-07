@@ -16,4 +16,4 @@
   task:
     - name: Listing Packages
       debug:
-        msg: "{{PACKAGE[0]}}"
+        msg: "{{ PACKAGE }}"
