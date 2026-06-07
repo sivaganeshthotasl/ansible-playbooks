@@ -1,8 +1,8 @@
 ---
 
-- name: Package list
-  hosts: servers
 
+- name: package list
+  hosts: servers
 
   vars:
     PACKAGE:
@@ -11,11 +11,15 @@
       - dockers
       - mysql
 
-
-  task:
-    - name: Listing Packages
+  tasks:
+    - name: printing package list
       debug:
-        msg: "{{PACKAGE}}"
+        msg: "{{PACKAGE[0]}}"
+
+    - name:
+      debug:
+        msg: "{{PACKAGE[1]}}"
+        
 
 
 
