@@ -9,8 +9,8 @@
       command: uptime
       register: UPTIME_OUTPUT
 
-  debug:
-    - name: Printing uptime
-      var: UPTIME_OUTPUT.stdout
+    - name: Print uptime
+      debug:
+        var: UPTIME_OUTPUT.std.out
 
 
