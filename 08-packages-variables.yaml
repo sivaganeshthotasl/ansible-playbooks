@@ -1,19 +1,39 @@
+# ---
+
+
+# - name: Listing Packages
+#   hosts: servers
+
+
+
+#   PACKAGE:
+#     - nginx
+#     - git
+#     - dockers
+#     - mysql
+
+
+#   task:
+#     - name: Listing Packages
+#       debug:
+#         msg: "{{ PACKAGE }}"
+
+
+
 ---
 
-
-- name: Listing Packages
+- name: Package list
   hosts: servers
 
 
+  vars:
+    PACKAGES:
+      - nginx
+      - git
+      - mysql
 
-  PACKAGE:
-    - nginx
-    - git
-    - dockers
-    - mysql
 
-
-  task:
-    - name: Listing Packages
+  tasks:
+    - name: Printing Packages list
       debug:
-        msg: "{{ PACKAGE }}"
+        msg: "{{PACKAGES}}"
