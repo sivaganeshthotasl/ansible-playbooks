@@ -1,17 +1,18 @@
 ---
 
 
-- name: Register Variable example
+- name: check uptime
   hosts: servers
 
 
-  tasks: Check uptime
+  tasks:
     - name: checking uptime
       command: uptime
-      register: UPTIME
-  
-    - name: print the uptime
-      debug:
-        var: UPTIME.stdout
-  
+      register: UPTIME_OUTPUT
 
+
+    - name: printing uptime
+      debug:
+        var: UPTIME_OUTPUT.stdout
+
+        
