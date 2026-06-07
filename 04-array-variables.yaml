@@ -14,4 +14,4 @@
   tasks:
     - name: Printing Packages list
       debug:
-        vars: PACKAGES
+        msg: PACKAGES
