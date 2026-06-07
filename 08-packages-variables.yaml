@@ -19,7 +19,11 @@
     - name:
       debug:
         msg: "{{PACKAGE[1]}}"
-        
+
+    - name:
+      debug:
+        msg: "{{PACKAGE[2]}}"
+
 
 
 
