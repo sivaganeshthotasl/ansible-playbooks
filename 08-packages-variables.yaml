@@ -7,10 +7,10 @@
 
 
   PACKAGE:
-    - nginx
-    - git
-    - dockers
-    - mysql
+      - nginx
+      - git
+      - dockers
+      - mysql
 
 
   task:
