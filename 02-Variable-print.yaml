@@ -23,5 +23,9 @@
   tasks:
     - name: Print Self Intruduction
       debug:
-        msg: "My name is {{ Name }} My Skills are {{ Skills }} I work in {{ Company }}"
+        msg: "My name is {{ Name }} 
+        msg: My Skills are {{ Skills }} 
+        msg: I work in {{ Company }}"
+
+        
 
