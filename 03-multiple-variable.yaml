@@ -2,6 +2,7 @@
 
 - name: Mutliple Variables
   hosts: servers
+  
 
 
 
@@ -17,4 +18,3 @@
     debug:
       msg: "My Name is {{ NAME }} Work as {{ ROLE }} in {{ CITY }}"
 
-      
