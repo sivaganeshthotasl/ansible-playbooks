@@ -7,4 +7,4 @@
 
 
 - debug:
-  var: UPTIME_OUTPUT
+  var: UPTIME_OUTPUT.stdout
