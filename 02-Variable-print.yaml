@@ -1,12 +1,27 @@
 ---
-- name: Variables Demo
+# - name: Variables Demo
+#   hosts: servers
+
+#   vars:
+#     NAME: Siva
+
+#   tasks:
+#     - name: Print Variables
+#       debug:
+#         msg: "My name is {{ NAME }}"
+
+
+- name: Self Intruduction
   hosts: servers
 
+
   vars:
-    NAME: Siva
+    Name: Siva Ganesh Thota SL
+    Skills: DevOps with AWS
+    Company: Volvo
 
   tasks:
-    - name: Print Variables
+    - name: Print Self Intruduction
       debug:
-        msg: "My name is {{ NAME }}"
+        msg: "My name is {{ Name }} My Skills are {{ Skills }} I work in {{ Company }}"
 
