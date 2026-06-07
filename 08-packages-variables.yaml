@@ -7,13 +7,13 @@
 
 
   PACKAGE:
-      - nginx
-      - git
-      - dockers
-      - mysql
+    - nginx
+    - git
+    - dockers
+    - mysql
 
 
   task:
     - name: Listing Packages
       debug:
-        msg: "{{ PACKAGE[0] }}"
+        msg: "{{PACKAGE[0]}}"
