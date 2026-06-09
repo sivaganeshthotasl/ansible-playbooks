@@ -8,10 +8,10 @@
   # vars_files:
   # - course.yaml
 
-  vars_prompt:
-  - name: Greeting
-    prompt: Please Enter the Greeting
-    private: false
+  # vars_prompt:
+  # - name: Greeting
+  #   prompt: Please Enter the Greeting
+  #   private: false
 
   tasks:
   - name: print the Greeting
@@ -23,3 +23,5 @@
 # 1 command line or args
 # 2 taks level arguments
 # 3 File
+# 4 Prompt
+
