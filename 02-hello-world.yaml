@@ -6,4 +6,7 @@
   - name: printing Hello World
     ansible.builtin.debug:
       msg: "Hello World"
-      
+
+  - name: Priting Welcome to Ansible Practice Class
+    ansible.builtin.debug:
+      msg: "Welcome to Ansible Practice Class"
