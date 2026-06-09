@@ -1,4 +1,4 @@
-- name: play Variables
+- name: play Level Variables
   hosts: local
   connection: local
 
@@ -7,6 +7,12 @@
     Duration: 120HR
     Trainer: Siva Ganesh Thota SL
 
+  tasks:
+  - name: Print Course Infromation
+    ansible.builtin.debug:
+      # vars reference sourended by ""
+      msg: "Hello {{ Course }}, Course Duration {{ Duration }}, Trainer is {{ Trainer }}"
+  
   tasks:
   - name: Print Course Infromation
     ansible.builtin.debug:
