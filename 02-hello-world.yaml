@@ -1,15 +1,9 @@
+
 - name: Hello World
   hosts: local
   connection: local
   tasks:
-  - name: printing hello World
-    ansible_builtin.debug:
+  - name: printing Hello World
+    ansible.builtin.debug:
       msg: "Hello World"
-
       
-
-
-
-  
-
-
