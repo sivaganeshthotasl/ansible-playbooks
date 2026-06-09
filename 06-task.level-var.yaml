@@ -15,6 +15,10 @@
       Trainer: Siva Ganesh Thota SL
     ansible.builtin.debug:
       msg: "Hello {{ Course}}, Course Duration is {{ Duration }}, Trainer is {{ Trainer }}"
+  
+  - name: Print task Variable Again
+    ansible.builtin.debug:
+      msg: "Hello {{ Course }}, Course Duration is {{ Duration }} Trainer is {{ Trainer }}"
       
   
   
