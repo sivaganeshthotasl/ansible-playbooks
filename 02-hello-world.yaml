@@ -4,8 +4,7 @@
   hosts: servers
 
 
-  tasks:
+  task:
   - name: print hello world
     ansible_builtin.debug:
       msg: "Hello World"
-      
