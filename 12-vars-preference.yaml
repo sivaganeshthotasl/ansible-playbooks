@@ -2,8 +2,8 @@
   hosts: local
   connection: local
 
-  vars:
-    Greeting: "Hello From Play"
+  # vars:
+  #   Greeting: "Hello From Play"
 
   # vars_files:
   # - course.yaml
@@ -24,4 +24,4 @@
 # 2 taks level arguments
 # 3 File
 # 4 Prompt
-
+# 5 play level
