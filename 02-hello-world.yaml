@@ -1,10 +1,11 @@
----
-
-- name: print the hello world
-  hosts: servers
 
 
-  task:
-    - name: print hello world
-      ansible_builtin.debug:
-        msg: "Hello World"
+- name: Hello World
+  hosts: local
+  connection: localhost
+  tasks:
+  - name: Print Hello World
+    ansible.builtin.debug:
+      msg: "Hello World"
+
+
