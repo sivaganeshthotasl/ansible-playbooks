@@ -1,0 +1,21 @@
+- name: taks level Variables
+  hosts: local
+  connection: local
+
+  vars:
+    Course: DevSecOps with AWS
+    Duration: 120HR
+    Trainer: Siva Ganesh Thota SL
+
+  tasks:
+  - name: task level Variables
+    vars:
+      Course: Ansible
+      Duration: 10HR 
+      Trainer: Siva Ganesh Thota SL
+    ansible.builtin.debug:
+      msg: "Hello {{ Course}}, Course Duration is {{ Duration }}, Trainer is {{ Trainer }}"
+      
+  
+  
+      
