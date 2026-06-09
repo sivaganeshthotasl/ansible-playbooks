@@ -1,4 +1,4 @@
-- name: Variable Prompt
+- name: Variable prompt
   hosts: local
   connection: local
 
