@@ -1,0 +1,14 @@
+- name: play Variables
+  hosts: local
+  connection: local
+
+  vars:
+    Course: Ansible # course = ansible in shell 
+    Duration: 120HR
+    Trainer: Siva Ganesh Thota SL
+
+  tasks:
+  - name: Print Course Infromation
+    ansible.builtin.debug:
+      # vars reference sourended by ""
+      msg: "Hello {{ Course }}, Course Duration {{ Duration }}, Trainer is {{ Trainer }}"
