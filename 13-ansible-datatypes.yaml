@@ -14,7 +14,7 @@
       CI: Jenkins
       SCRIPTING: "Shell, Ansible, Terraform, Python"
 
-    tasks:
+    task:
     - name: Printing Course Details
       ansible.builtin.debug:
         msg: "Hello {{ Course }}, Duration is {{ Duration }}, Is Live { Is_Live }, Concepts are {{ Concepts }}"
