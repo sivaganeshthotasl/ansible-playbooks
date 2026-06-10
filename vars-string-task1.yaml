@@ -1,5 +1,5 @@
-- name: Variable Demo
-  hosts: local
+- name: String Variable Demo  # Playbook Name
+  hosts: local # run in localhost
   connection: local
 
   vars: # String Variables
@@ -7,7 +7,7 @@
 
   tasks: 
   - name: Print Name Vars
-    ansible.builtin.debug:
+    ansible.builtin.debug:   # this is used for to print the msg
       msg: "Hello My Name is {{ NAME }}"
       
 
