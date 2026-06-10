@@ -1,6 +1,6 @@
 ---
 - name: Register Example
-  hosts: local
+  hosts: localhost
   connection: local
 
   tasks:
