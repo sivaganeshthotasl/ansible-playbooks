@@ -1,6 +1,7 @@
 - name: Register Disk Usage Output to Variable
   hosts: local
   connection: local
+  become: true
 
   tasks:
   - name: check disk Usage
