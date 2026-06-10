@@ -17,8 +17,8 @@
 
   tasks:
   - name: Printing Course Details
-    ansibler.builtin.debug:
+    ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Duration is {{ DURATION }}, Is Live {{ IS_LIVE }}, Concepts are {{ CONCEPTS }}"
 
 
-      
+
