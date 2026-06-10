@@ -1,5 +1,5 @@
-- name: Register command output in Variable # This is the name of playbook
-  hosts: local  # Runs in the localhost
+- name: register Varaible Demo
+  hosts: local
   connection: local
 
   tasks:
@@ -11,5 +11,5 @@
     ansible.builtin.debug:
       var: UPTIME_OUTPUT.stdout
 
-      
+
 
