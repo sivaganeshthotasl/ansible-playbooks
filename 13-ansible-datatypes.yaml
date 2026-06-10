@@ -1,7 +1,7 @@
 - name: Ansible datatypes
   hosts: local
   connection: local
-
+  
   vars:
     Duration: 120 # this is Number Variable
     Course: DevSecOps with AWS # this string varaible
