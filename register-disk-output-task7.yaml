@@ -5,7 +5,7 @@
 
   tasks:
   - name: check disk Usage
-    command: df-hT
+    command: df-h
     register: DISK_OUTPUT
 
   - name: Display the Disk usage Output
