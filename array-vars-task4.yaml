@@ -13,8 +13,16 @@
 
 
   tasks:
-  - name: Print First package 
+  - name: Print First package # this is the name of task 1
     ansible.builtin.debug:
       msg: "Installing First {{ PACKAGES[0] }}"
+  - name: Display the Last package # this is the name of task 2
+    ansible.builtin.debug:
+      msg: "Installing Last Package {{ PACKAGES | last }}"
+  - name: Display the 3rd Package # this is the name of task 3
+    ansible.builtin.debug:
+      msg: "Displaying the 2nd Package is {{ PACKAGES[3] }}"
+
       
+
 
