@@ -1,0 +1,20 @@
+- name: Ansible datatypes
+  hosts: local
+  connection: local
+
+  vars:
+  Duration: 120 # this is Number Variable
+  Course: DevSecOps with AWS # this string varaible
+  Is_live: true # this boolean variable
+  Tools:    # List Variables
+  - Linux
+  - Shell
+  - Ansible
+  Concepts: # map or dictionary or object. reffered like {}
+    CI: Jenkins
+    SCRIPTING: "shell, Ansible, Terraform, Python"
+
+  taks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Course is {{ Course}}, Duration is {{ Duration }}, is live {{ Is_live }}, Tools are {{ Tools }}, Concepts are {{ Concepts }}"
