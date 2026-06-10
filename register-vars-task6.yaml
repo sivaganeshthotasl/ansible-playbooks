@@ -4,11 +4,10 @@
 
   tasks:
   - name: check uptime
-    COMMAND: uptime
-    Register: UPTIME_OUTPUT
+    command: uptime
+    register: UPTIME_OUTPUT
 
   - name: print uptime
     ansible.builtin.debug:
       var: UPTIME_OUTPUT.stdout
 
-      
