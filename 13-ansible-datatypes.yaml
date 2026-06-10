@@ -1,20 +1,24 @@
-- name: Variable Datatypes
+- name: Ansible Datatypes
   hosts: local
   connection: local
 
+
   vars:
-    Duration: 120 # this is Numaric Variable
-    Course: DevSecOps With AWS # string Variable
-    Is_Live: true  # boolean Variable
-    Tools:
+    DURATION: 120 # Numeric Vars
+    COURSE: DevSecOps With AWS # String Vars
+    IS_LIVE: true  # boolean Vars
+    TOOLS:   # List Vars
     - Linux
     - Shell
     - Ansible
-    Concepts:     # Map or Dictonary or object. refered like {}
+    CONCEPTS:   # map or dictonary vars
       CI: Jenkins
       SCRIPTING: "Shell, Ansible, Terraform, Python"
 
-    task:
-    - name: Printing Course Details
-      ansible.builtin.debug:
-        msg: "Hello {{ Course }}, Duration is {{ Duration }}, Is Live { Is_Live }, Concepts are {{ Concepts }}"
+  tasks:
+  - name: Printing Course Details
+    ansibler.builtin.debug:
+      msg: "Hello {{ COURSE }}, Duration is {{ DURATION }}, Is Live {{ IS_LIVE }}, Concepts are {{ CONCEPTS }}"
+
+
+      
