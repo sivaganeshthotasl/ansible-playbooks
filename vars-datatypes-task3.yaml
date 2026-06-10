@@ -4,7 +4,7 @@
 
   vars: # Datatypes variables
     NAME: Siva Ganesh Thota # this is String Variable
-    AGE: "30"   # this is Number or Numeric Variable
+    AGE: 30   # this is Number or Numeric Variable
     IS_ADMIN: true   # this boolean Variable
     PACKAGES:  # This is List Varaibles
     - nginx
@@ -18,5 +18,5 @@
   tasks:
   - name: Print Datatypes Varaibles
     ansible.builtin.debug:
-      msg: "This is {{ NAME }}, I am {{ Age }} Years Old, Is Admin {{ IS_ADMIN }}, PACKAGES are {{ PACKAGES }}, CONCEPTS are {{ CONCEPTS }}"
+      msg: "This is {{ NAME }}, I am {{ AGE }} Years Old, Is Admin {{ IS_ADMIN }}, PACKAGES are {{ PACKAGES }}, CONCEPTS are {{ CONCEPTS }}"
 
