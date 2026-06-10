@@ -5,11 +5,10 @@
 
   tasks:
   - name: Register Command
-    command: free -h
+    command: df -h
     register: MEMORY_OUTPUT
 
   - name: Display the Output
     ansible.builtin.debug:
       var: MEMORY_OUTPUT.stdout
 
-      
