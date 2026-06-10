@@ -1,0 +1,12 @@
+- name: Register Disk Usage Output to Variable
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: check disk Usage
+    command: df-hT
+    register: DISK_OUTPUT
+
+  - name: Display the Disk usage Output
+    ansible.builtin.debug:
+      var: DISK_OUTPUT.stdout
