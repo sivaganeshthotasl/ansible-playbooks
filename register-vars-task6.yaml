@@ -1,15 +1,16 @@
-- name: register Varaible Demo
+---
+- name: Register Example
   hosts: local
   connection: local
 
   tasks:
-  - name: Check Uptime
-    command: Uptime
+
+  - name: Check uptime
+    command: uptime
     register: UPTIME_OUTPUT
 
-  - name: Display Uptime
-    ansible.builtin.debug:
+  - name: Print uptime
+    debug:
       var: UPTIME_OUTPUT.stdout
-
 
 
