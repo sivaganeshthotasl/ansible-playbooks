@@ -1,6 +1,5 @@
----
-- name: Register Example
-  hosts: localhost
+- name: Register Varaibles  # this is name of playbook
+  hosts: local  # runs in the localhost
   connection: local
 
   tasks:
