@@ -9,20 +9,19 @@
     CITY: Bangalore
 
   tasks:
-  - name: Print Multiple Variables
+  - name: Print Name Variable
     ansible.builtin.debug:
       msg: "This is {{ NAME }}"
 
-  - name: Print ROLE
+  - name: Print ROLE var
     ansible.builtin.debug:
       msg: "My Role is {{ ROLE }}"
   
-  - name: print COMPANY
+  - name: print COMPANY var
     ansible.builtin.debug:
       msg: "I work in {{ COMPANY }}"
   
-  - name: Print CITY
+  - name: Print CITY var
     ansible.builtin.debug:
       msg: "I live in {{ CITY }}"
 
-      
