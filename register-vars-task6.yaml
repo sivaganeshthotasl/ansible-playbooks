@@ -1,0 +1,11 @@
+- name: Sample Register Vars   # this is the name of playbook
+  hosts: local # Runs in the Localhost
+  connection: local
+
+  vars:
+    COMMAND: uptime
+    Register: UPTIME_OUTPUT
+
+  tasks:
+    ansible.builtin.debug:
+      var: UPTIME_OUTPUT.stdout
