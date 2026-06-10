@@ -1,0 +1,13 @@
+- name: Variable Demo
+  hosts: local
+  connection: local
+
+  vars: # String Variables
+    NAME: Siva Ganesh Thota SL
+
+  tasks: 
+  - name: Print Name Vars
+    ansible.builtin.debug:
+      msg: "Hello My Name is {{ NAME }}"
+      
+
