@@ -1,0 +1,28 @@
+- name: Multiple Variables Demo   # this the name of Playbook
+  hosts: local  # run in the localhost
+  connection: local
+
+  vars:   # Multiple Variables
+    NAME: Siva Ganesh Thota SL
+    ROLE: DevSecOps with AWS 
+    COMPANY: BENZ
+    CITY: Bangalore
+
+  tasks:
+  - name: Print Multiple Variables
+    ansible.builtin.debug:
+      msg: "This is {{ NAME }}"
+
+  - name: Print ROLE
+    ansible.builtin.debug:
+      msg: "My Role is {{ ROLE }}"
+  
+  - name: print COMPANY
+    ansible.builtin.debug:
+      msg: "I work in {{ COMPANY }}"
+  
+  - name: Print CITY
+    ansible.builtin.debug:
+      msg: "I live in {{ CITY }}"
+
+      
