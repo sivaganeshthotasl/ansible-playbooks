@@ -9,6 +9,6 @@
     register: UPTIME_OUTPUT
   - name: Display Uptime UPTIME_OUTPUT
     ansible.builtin.debug:
-      msg: "UPTIME_OUTPUT"
+      var: "UPTIME_OUTPUT"
 
-      
+
