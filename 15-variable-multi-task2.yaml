@@ -1,0 +1,23 @@
+---
+# Practice Task2
+# Creting a mulitple vars
+# EMP_NAME EMP_ID EMP_ROLE 
+
+- name: Practicing Multi vars
+  hosts: local
+  connection: local
+
+  vars:
+    EMP_NAME: Siva Ganesh Thota SL
+    EMP_ID: "1356"
+    EMP_ROLE: DevSecOps Engineer
+
+  tasks:
+  - name: Displaying Employee vars
+    ansible.builtin.debug:
+      msg:
+        - "Employee Name is {{ EMP_NAME }}"
+        - "Employee Id is {{ EMP_ID }}"
+        - "Employee Role is {{ EMP_ROLE }}"
+
+        
