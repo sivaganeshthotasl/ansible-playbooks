@@ -5,10 +5,10 @@
 
   tasks:
   - name: Execute uptime command
-    ansible.builtin.command: uptime
-    register: UPTIME_OUTPUT
-  - name: Display Uptime UPTIME_OUTPUT
-    ansible.builtin.debug:
-      var: "UPTIME_OUTPUT"
+    ansible.builtin.command: uptime    # this is command module is used to execute linux commands.
+  #   register: UPTIME_OUTPUT  # this is used for register uptime command output in UPTIM_OUTPUT
+  # - name: Display Uptime UPTIME_OUTPUT  
+  #   ansible.builtin.debug:   # we used display module to display or print uptime output.
+  #     var: "UPTIME_OUTPUT"   # we use var for store that output and print.
 
 
