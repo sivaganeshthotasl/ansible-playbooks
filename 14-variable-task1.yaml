@@ -1,22 +1,14 @@
----
-
-- name: Task level Variable example
+- name: creating Variable
   hosts: local
   connection: local
 
   vars:
-    NAME: SIVAJI
-
+    CITY: Bangalore
 
   tasks:
-  - name: Create Variable
-    vars:
-      NAME: SIVA Ganesh Thota
-    ansible.builtin.debug:
-      msg: "My Name is {{ NAME }}"
-
-  - name: Display the Glb Variable
+  - name: Siva Ganesh
     ansible.builtin.debug:
       msg: "My name is {{ NAME }}"
+
 
 
