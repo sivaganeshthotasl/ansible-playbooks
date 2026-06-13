@@ -5,7 +5,7 @@
   tasks:
   vars:
     CITY: HYD
-  - name: Display the CITY
-    ansible.builtin.debug:
-      msg: "i live in {{ CITY }}"
+- name: Display the CITY
+  ansible.builtin.debug:
+    msg: "i live in {{ CITY }}"
 
