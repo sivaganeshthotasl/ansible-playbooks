@@ -1,0 +1,19 @@
+---
+# Practice Task3
+# Install a git package
+# create a Package variable
+
+- name: Package variable
+  hosts: local
+  connection: local
+
+  vars:
+    PACKAGE: git
+
+  tasks:
+  - name: Installing Git
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+
+      
