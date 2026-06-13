@@ -4,7 +4,7 @@
 
 - name: Play Level Variable Demo
   hosts: local
-  connetion: local
+  connection: local
 
   
   vars:
@@ -15,4 +15,3 @@
     ansible.builtin.debug:
       msg: "This is {{ VARIABLE_NAME }}"
 
-      
