@@ -6,7 +6,7 @@
   connection: local
 
   vars:
-  CITY: Bangalore
+    CITY: Bangalore
 
   tasks:
   - name: display the city variable
