@@ -4,6 +4,7 @@
 - name: User var
   hosts: local
   connection: local
+  become: true
 
   vars:
     USERNAME: siva
