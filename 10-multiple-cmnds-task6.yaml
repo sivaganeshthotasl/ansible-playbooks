@@ -1,0 +1,26 @@
+- name: Multiple Tasks Using Command Module
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Fetch system Hostname 
+    ansible.builtin.command: hostname
+    register: HOSTNAME_OUTPUT
+
+  - name: Fetch Current date
+    ansible.builtin.command: date
+    register: DATE_OUTPUT
+
+  - name: Fetch system uptime
+    ansible.builtin.command: uptime
+    register: UPTIME_OUTPUT
+
+
+  - name: Display all Results
+    ansible.builtin.debug:
+      msg:
+        - "hostname: {{ HOSTNAME_OUTPUT.stdout }}"
+        - "Date: {{ DATE_OUTPUT.stdout }}"
+        - "Uptime: {{ UPTIME_OUTPUT.stdout }}"
+        
+        
