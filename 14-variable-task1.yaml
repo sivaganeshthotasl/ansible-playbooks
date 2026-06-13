@@ -31,7 +31,7 @@
     - name: display the CITY
       vars:
         CITY: Karnataka
-
+    - name: Display the CITY
       ansible.builtin.debug:
         msg: "I live in {{ CITY }}"
 
