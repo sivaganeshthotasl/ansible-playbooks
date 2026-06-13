@@ -1,0 +1,14 @@
+- name: check uptime # this is the name of playbook
+  hosts: local  # runs it in the localhost
+  connection: local
+
+
+  tasks:
+  - name: Execute uptime command
+    ansible.builtin.command: uptime
+    register: UPTIME_OUTPUT
+  - name: Display Uptime UPTIME_OUTPUT
+    ansible.builtin.debug:
+      msg: "UPTIME_OUTPUT"
+
+      
