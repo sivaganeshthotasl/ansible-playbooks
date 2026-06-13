@@ -6,9 +6,8 @@
   connection: local
 
   tasks:
-  - name: creating a variable
-    vars:
-      CITY: Hyderabad
+  vars:
+    CITY: Bangalore
 
   - name: display the city 
     ansible.builtin.debug:
