@@ -10,9 +10,9 @@
       path: /tmp/ansible.txt
       state: touch
   - name: Creating a file
-    ansible.builtin.file:
-      path: /tmp/ansible.txt1
-      state: touch
+    ansible.builtin.file:    # this is a file module and is used to file creation
+      path: /tmp/ansible.txt1  # this is the patch where you would like to create
+      state: touch  # this is the state command to create a file.
 
       
   
