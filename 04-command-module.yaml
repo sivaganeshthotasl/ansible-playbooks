@@ -6,7 +6,7 @@
 
   tasks:
   - name: Creating a File
-    ansible.builtin.command: touch
-    path: /tmp/ansible.txt
-    
+    ansible.builtin.command: touch /tmp/ansible.txt
+   
+
       
