@@ -1,6 +1,7 @@
 - name: installing nginx package
   hosts: local
   connection: local
+  become: true # runs 
 
   vars:
     PACKAGE: nginx
@@ -8,12 +9,12 @@
   tasks: 
   - name: Displaying  Nginx PACKAGE
     ansible.builtin.debug:
-      msg: "Installing {{ PACKAGE }}"
+      msg: "Going to install {{ PACKAGE }}"
   
   - name: Installing Nginx
     ansible.builtin.package:
       name: {{ PACKAGE }}
-      state: present
+      state: present # present = install
   - name: Displaying Installation Success
     ansible.builtin.debug:
       msg: "{{ PACKAGE }} IS Installed Successfully"
