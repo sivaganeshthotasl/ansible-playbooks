@@ -1,0 +1,12 @@
+# Creating Files using ansible
+
+- name: File Creation  # this is the name of playbook
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Creating a File
+    ansible.builtin.command: touch
+    path: /tmp/ansible.txt
+    
+      
