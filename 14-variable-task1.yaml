@@ -3,7 +3,7 @@
   connection: local
 
   vars:
-    CITY: Bangalore
+    NAME: SIVA GANESH
 
   tasks:
   - name: Siva Ganesh
