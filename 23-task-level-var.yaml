@@ -1,0 +1,13 @@
+---
+
+# Task Leve Variable example
+-   name: Task Level Var Demo
+    hosts: local
+    connection: local
+
+    tasks:
+    -   name: task var
+        vars:
+            NAME: Siva Ganesh Thota SL
+        ansible.builtin.debug:
+            msg: "my name is {{ NAME }}"
