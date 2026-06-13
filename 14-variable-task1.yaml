@@ -1,14 +1,15 @@
-- name: creating Variable
+- name: installing nginx package
   hosts: local
   connection: local
 
   vars:
-    NAME: SIVA GANESH
+    PACKAGE: nginx
 
-  tasks:
-  - name: Siva Ganesh
+  tasks: 
+  - name: Installing Nginx
     ansible.builtin.debug:
-      msg: "My name is {{ NAME }}"
+      msg: Installing {{ PACKAGE }}
+
 
 
 
