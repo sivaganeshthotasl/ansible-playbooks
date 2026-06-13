@@ -9,5 +9,7 @@
   - name: Creating  a Dir 
     ansible.builtin.file:   # this module also used to created dir as well.
       path: /opt/ansible_project
-      state: directory
+      state: directory  # here directory we used for creating directory.
+
+      
 
