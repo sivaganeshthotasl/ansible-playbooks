@@ -1,3 +1,5 @@
+# Running Linux commands through Ansible
+
 - name: check uptime # this is the name of playbook
   hosts: local  # runs it in the localhost
   connection: local
