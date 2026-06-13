@@ -6,9 +6,17 @@
     PACKAGE: nginx
 
   tasks: 
-  - name: Installing Nginx
+  - name: Displaying  Nginx PACKAGE
     ansible.builtin.debug:
-      msg: Installing {{ PACKAGE }}
+      msg: "Installing {{ PACKAGE }}"
+  
+  - name: Installing Nginx
+    ansible.builtin.package:
+      name: {{ PACKAGE }}
+      state: present
+  - name: Displaying Installation Success
+    ansible.builtin.debug:
+      msg: "{{ PACKAGE }} IS Installed Successfully"
 
 
 
