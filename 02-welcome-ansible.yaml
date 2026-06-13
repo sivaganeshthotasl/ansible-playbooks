@@ -1,0 +1,67 @@
+- name: Print Welcome to Ansible # this is the name of the playbook
+  hosts: local  # runs it in the localhost
+  connection: local
+
+  tasks:
+  - name: Print Welcome to Ansible
+    ansible.builtin.debug:
+      msg: "Welcome to Ansible"
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Hellow World
+#   hosts: local
+#   connection: local # no need user name and password if you are running in the same server
+
+#   tasks:
+#   - name: Printing Hello World
+#     ansible.builtin.debug:
+#       msg: "Hello World"
+
+# - name: Welcome to Ansible Practice Class
+#   hosts: local
+#   connection: local
+
+
+#   tasks:
+#   - name: Printing Ansible Practice Class
+#     ansible.builtin.debug:
+#       msg: "Welcome to Ansible Practice Class"
+
+
+# - name: Best Of Luck
+#   hosts: local
+#   connection: local
+
+
+#   tasks:
+#   - name: print Best Of Luck
+#     ansible.builtin.debug:
+#       msg: "Best of Luck for Your Ansible Practice"
+
+
