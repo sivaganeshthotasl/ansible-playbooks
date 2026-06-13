@@ -5,7 +5,7 @@
   hosts: local
   connection: local
 
-  taks:
+  tasks:
   - name: Fetch System hostname
     ansible.builtin.command: hostname
     # if we want to see the output of hostname then we need register variable and display that var. then we can see the output of hostname
@@ -20,7 +20,7 @@
     ansible.builtin.debug:
       var: UPTIME_OUTPUT.stdout
 
-      
+
   - name: Fetch Current date
     ansible.builtin.command: date
     # if we want to see the output of hostname then we need register variable and display that var. then we can see the output of date
