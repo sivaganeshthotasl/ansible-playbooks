@@ -1,0 +1,25 @@
+---
+
+# Use one or two Variable in multi tasks
+
+- name: Multi Tasks Examples
+  hosts: local
+  connection: local
+
+
+  vars:
+    EMP_NAME: Siva Ganesh Thota SL
+    COMPANY: BENZ
+
+  tasks:
+  - name: Task 1
+    ansible.builtin.debug:
+      msg: "{{ EMP_NAME }} work at {{ COMPANY }}"
+
+  - name: Task 2
+    ansible.builtin.debug:
+      msg: "{{ Company }} is a Great Company"
+
+  - name: task 3
+    ansible.builtin.debug:
+      msg: "{{ COMPANY }} is a Productbased Company"
