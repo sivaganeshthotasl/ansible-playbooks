@@ -23,3 +23,6 @@
   - name: task 3
     ansible.builtin.debug:
       msg: "{{ COMPANY }} Provides Good Benifets to {{ EMP_NAME }}"
+
+
+# play-level variables can be used by multiple tasks.
