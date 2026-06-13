@@ -4,6 +4,9 @@
   hosts: local
   connection: local
 
+  vars:
+    NAME: SIVAJI
+
 
   tasks:
   - name: Create Variable
