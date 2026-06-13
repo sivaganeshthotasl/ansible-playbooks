@@ -1,34 +1,18 @@
-- name: installing nginx package
+---
+# Practing Task1
+# Create a Variable
+# Print City is Bangalore
+
+- name: variable creation
   hosts: local
   connection: local
-  become: true # runs 
 
   vars:
-    PACKAGE: nginx
+    CITY: Bangalore
 
-  tasks: 
-  - name: Displaying  Nginx PACKAGE
+  tasks:
+  - name: Display the City
     ansible.builtin.debug:
-      msg: "Going to install {{ PACKAGE }}"
-  
-  - name: Installing Nginx
-    ansible.builtin.package:
-      name: "{{ PACKAGE }}"
-      state: present # present = install
-  - name: Displaying Installation Success
-    ansible.builtin.debug:
-      msg: "{{ PACKAGE }} IS Installed Successfully"
-
-  - name: start the service
-    ansible.builtin.service:
-      name: "{{ PACKAGE }}"
-      state: started
+      msg: "City is {{ CITY }}"
 
       
-
-
-
-
-
-
-
