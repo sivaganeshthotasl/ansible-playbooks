@@ -1,11 +1,33 @@
 # Practice Task5
 # Executing Multiple Commands:
-
+# Realt Time Example is if devops enginner wants to collect date of date, uptime, or hostname. 
 - name: Multiple Commands Execute
   hosts: local
   connection: local
 
   taks:
-  - name: Executing Multiple commands
-    ansible.builtin.command: uptime | date | hostname
+  - name: Fetch System hostname
+    ansible.builtin.command: hostname
+    # if we want to see the output of hostname then we need register variable and display that var. then we can see the output of hostname
+    register: HOSTNAME_OUTPUT
+    ansible.builtin.debug:
+      var: HOSTNAME_OUTPUT.stdout
+  
+  - name: Fetch system Uptime
+    ansible.builtin.command: uptime
+    # if we want to see the output of hostname then we need register variable and display that var. then we can see the output of uptime
+    register: UPTIME_OUTPUT
+    ansible.builtin.debug:
+      var: UPTIME_OUTPUT.stdout
+
+      
+  - name: Fetch Current date
+    ansible.builtin.command: date
+    # if we want to see the output of hostname then we need register variable and display that var. then we can see the output of date
+    register: DATE_OUTPUT
+    ansible.builtin.debug:
+      var: DATE_OUTPUT.stdout
+
+  
+
     
