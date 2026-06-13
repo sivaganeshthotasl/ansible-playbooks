@@ -1,14 +1,11 @@
-- name: creating Variable
+- name: Creating a Variable task 1
   hosts: local
   connection: local
 
-  vars:
-    CITY: Bangalore
-
   tasks:
+  vars:
+    CITY: HYD
   - name: Display the CITY
     ansible.builtin.debug:
-      msg: "I live {{ CITY }}"
-
-
+      msg: "i live in {{ CITY }}"
 
