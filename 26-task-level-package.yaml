@@ -4,6 +4,7 @@
 - name: Package Example
   hosts: local
   connection: local
+  become: true
 
   tasks:
   - name: Install Git
@@ -19,4 +20,3 @@
     ansible.builtin.package:
       name: "{{ PACKAGE }}"
 
-      
