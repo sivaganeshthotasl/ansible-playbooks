@@ -17,4 +17,7 @@
       msg: "Task2 var name is {{ NAME }}"
 
 
-      
+  
+# What Happens?
+# task-1 gets the result but 
+# task-2 gets the error 'NAME' is undefined because task 2 has no variable inside the task. 
