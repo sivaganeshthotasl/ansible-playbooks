@@ -1,0 +1,11 @@
+# Practice Task5
+# Executing Multiple Commands:
+
+- name: Multiple Commands Execute
+  hosts: local
+  connection: local
+
+  taks:
+  - name: Executing Multiple commands
+    ansible.builtin.command:
+      cmd: uptime | date | hostname
