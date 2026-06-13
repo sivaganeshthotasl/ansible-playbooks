@@ -4,6 +4,7 @@
 - name:   Nginx Package Installation
   hosts: local # i am running this script in the local host if we want to run in a another node we define host group name which is stored in inventory file.
   connection: local
+  become: true  # Every task below this will run with root/sudo privileges
 
   vars:
     PACKAGE: nginx
