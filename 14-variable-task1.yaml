@@ -10,6 +10,8 @@
     CITY: HYD
 
   tasks:
+  vars:
+    CITY: Karnataka
   - name: display the CITY
     ansible.builtin.debug:
       msg: "I live in {{ CITY }}"
