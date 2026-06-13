@@ -7,7 +7,7 @@
 
   tasks:
   - name: Creating  a Dir 
-    ansible.builtin.file:
+    ansible.builtin.file:   # this module also used to created dir as well.
       path: /opt/project
       state: directory
 
