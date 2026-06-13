@@ -9,6 +9,13 @@
     CITY: Bangalore
 
   tasks:
+  var:
+    CITY: Hyderabad
   - name: display the city variable
     ansible.builtin.debug:
       msg: "I LIVE IN {{ CITY }}"
+
+  - name: display the city variable
+    ansible.builtin.debug:
+      msg: "My Base Location is {{ CITY }}"
+
