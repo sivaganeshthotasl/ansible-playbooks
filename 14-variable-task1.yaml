@@ -15,4 +15,8 @@
     ansible.builtin.debug:
       msg: "My Name is {{ NAME }}"
 
+  - name: Display the Glb Variable
+    ansible.builtin.debug:
+      msg: "My name is {{ NAME }}"
+
 
