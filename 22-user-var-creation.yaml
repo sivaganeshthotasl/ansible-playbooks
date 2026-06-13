@@ -1,0 +1,16 @@
+---
+# Create a user using var
+
+- name: User var
+  hosts: local
+  connection: local
+
+  vars:
+    USERNAME: siva
+  
+  tasks:
+  - name: Create a user
+    ansible.builtin.user:
+      name: "{{ USERNAME }}"
+      state: present
+
