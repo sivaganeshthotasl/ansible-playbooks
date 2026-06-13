@@ -18,7 +18,7 @@
 
   - name: Task 2
     ansible.builtin.debug:
-      msg: "{{ Company }} is a Great Company"
+      msg: "{{ COMPANY }} is a Great Company"
 
   - name: task 3
     ansible.builtin.debug:
