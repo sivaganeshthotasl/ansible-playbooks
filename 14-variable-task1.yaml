@@ -11,7 +11,7 @@
 
   tasks:
   - name: display the CITY
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "I live in {{ CITY }}"
 
   
