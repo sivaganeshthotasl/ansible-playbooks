@@ -1,0 +1,21 @@
+---
+# Create Multiple variables and Store multiple values to them and print them.
+
+- name: Multiple Variables Demo
+  hosts: local
+  connection: local
+
+  vars:
+    NAME: Siva Ganesh Thota SL
+    COMPANY: BENZ
+    CITY: Bangalore
+
+  tasks:
+  - name: Display ALL variables
+    ansible.builtin.debug:
+      msg:
+        - "My Name is {{ NAME }}"
+        - "I Work in {{ COMPANY }}"
+        - "I live in {{ CITY }}"
+
+        
