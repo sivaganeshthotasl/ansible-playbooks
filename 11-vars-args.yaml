@@ -1,9 +1,0 @@
-- name: Variable Arguments from Command line
-  hosts: local
-  connection: local
-
-  tasks:
-  - name: Variable Arguments
-    ansible.builtin.debug:
-      msg: "Hello {{ Course }}, Duration is {{ Duration }}, Trainer is {{ Trainer }}"
-      

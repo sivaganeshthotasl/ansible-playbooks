@@ -1,0 +1,13 @@
+# Store your name in a variable and print it.
+
+- name: single Variable Demo
+  hosts: local
+  connection: local
+
+  vars:
+    NAME: Siva Ganesh Thota SL
+
+  tasks:
+  - name: Print Name Variable
+    ansible.builtin.debug:
+      msg: {{ NAME }}    # to Access Variable value we should use {{ var name }} space is needed 
