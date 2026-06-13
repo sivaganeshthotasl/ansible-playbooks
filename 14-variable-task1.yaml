@@ -1,21 +1,18 @@
 # Variable Practice Task 1
 # Create a Variable
 
-- name: Practicing Variable task 1
+- name: VAr creation
   hosts: local
   connection: local
 
-  vars:
-    CITY: Bangalore
-
   tasks:
-  var:
-    CITY: Hyderabad
-  - name: display the city variable
-    ansible.builtin.debug:
-      msg: "I LIVE IN {{ CITY }}"
+  - name: creating a variable
+    vars:
+      CITY: Hyderabad
 
-  - name: display the city variable
+  - name: display the city 
     ansible.builtin.debug:
-      msg: "My Base Location is {{ CITY }}"
+      msg: "i live in {{ CITY }}"
+
+  
 
