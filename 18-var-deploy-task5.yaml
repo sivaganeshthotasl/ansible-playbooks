@@ -5,13 +5,10 @@
 - name: Deploy dev 
   hosts: local
   connection: local
-
-  vars:
-    ENVIRONMENT: Dev 
+ 
   
   tasks:
   - name: Display Deploying on Dev
     ansible.builtin.debug:
       msg: "Deploying Applicaiton in {{ ENVIRONMENT }}"
 
-      
