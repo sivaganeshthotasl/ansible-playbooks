@@ -1,0 +1,23 @@
+---
+
+# Creating Different Variable for different tasks
+
+- name: Multi task Variables
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: create Name var andd print it
+    vars:
+      NAME: Siva Ganesh Thota SL
+    ansible.builtin.debug:
+      msg: "This is {{ NAME }}"
+
+  - name: Create Company var and print it
+    vars:
+      COMPANY: BENZ
+    ansible.builtin.debug:
+      msg: "I work in {{ COMPANY }}"
+
+  
