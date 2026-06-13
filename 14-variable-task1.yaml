@@ -13,7 +13,7 @@
   
   - name: Installing Nginx
     ansible.builtin.package:
-      name: {{ PACKAGE }}
+      name: "{{ PACKAGE }}"
       state: present # present = install
   - name: Displaying Installation Success
     ansible.builtin.debug:
