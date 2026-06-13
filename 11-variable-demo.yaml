@@ -11,4 +11,4 @@
   tasks:
   - name: Print Name Variable
     ansible.builtin.debug:
-      msg: {{ NAME }}    # to Access Variable value we should use {{ var name }} space is needed 
+      msg: "{{ NAME }}"    # to Access Variable value we should use {{ var name }} space is needed 
