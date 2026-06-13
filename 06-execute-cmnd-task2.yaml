@@ -8,4 +8,9 @@
   tasks:
   - name: Executing date command
     ansible.builtin.command: date
-    
+    register: DATE_OUTPUT
+  - name: Displaying date output
+    ansible.builtin.debug:
+      var: DATE_OUTPUT
+
+      
