@@ -14,7 +14,7 @@
   tasks:
   - name: Task 1
     ansible.builtin.debug:
-      msg: "{{ EMP_NAME }} work at {{ COMPANY }}"
+      msg: "{{ EMP_NAME }} works at {{ COMPANY }}"
 
   - name: Task 2
     ansible.builtin.debug:
