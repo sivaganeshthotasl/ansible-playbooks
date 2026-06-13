@@ -1,0 +1,22 @@
+---
+# Deploy different packages in different tasks.
+
+- name: Package Example
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Install Git
+    vars:
+      PACKAGE: git
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+
+  - name: Install Tree
+    vars:
+      PACKAGE: tree
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+
+      
