@@ -11,6 +11,6 @@
     register: DATE_OUTPUT
   - name: Displaying date output
     ansible.builtin.debug:
-      var: DATE_OUTPUT
+      var: DATE_OUTPUT.stdout
 
-      
+
