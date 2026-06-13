@@ -3,12 +3,12 @@
 
 - name: File Creation  # this is the name of playbook
   hosts: local # runs it in the localhost  # if you want to creata different node then you can mention group host name. for example dev or qa
-  connect: local
+  connection: local
 
   tasks:
-  - name: Crating a File
+  - name: Creating a File
     ansible.builtin.file:
       path: /tmp/ansible.txt
       state: touch
 
-      
+
