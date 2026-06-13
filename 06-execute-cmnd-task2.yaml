@@ -1,0 +1,11 @@
+# Practice Task2
+# Execute Command using Command Module
+
+- name: Execute Command   # this is the name of playbook
+  hosts: local  # runs it in the localhost
+  connection: local # this is the connection of localhost
+
+  tasks:
+  - name: Executing date command
+    ansible.builtin.command: date
+    
