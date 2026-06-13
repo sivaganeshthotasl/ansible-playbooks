@@ -8,9 +8,10 @@
   tasks:
   - name: Executing date command
     ansible.builtin.command: date
+    # if you want to see the output of date we use register and save the output in the DATE_OUTPUT. then display that using var 
     register: DATE_OUTPUT
   - name: Displaying date output
     ansible.builtin.debug:
-      var: DATE_OUTPUT.stdout
+      var: DATE_OUTPUT.stdout   
 
 
