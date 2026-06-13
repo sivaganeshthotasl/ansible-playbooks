@@ -1,0 +1,18 @@
+---
+
+# Example Syntax for Play Level Variable
+
+- name: Play Level Variable Demo
+  hosts: local
+  connetion: local
+
+  
+  vars:
+    VARIABLE_NAME: Play Level Variable
+
+  tasks:
+  - name: Task-1
+    ansible.builtin.debug:
+      msg: "This is {{ VARIABLE_NAME }}"
+
+      
