@@ -19,6 +19,16 @@
     ansible.builtin.debug:
       msg: "{{ PACKAGE }} IS Installed Successfully"
 
+  - name: start the service
+    ansible.builtin.service:
+      name: "{{ PACKAGE }}"
+      state: started
+
+      
+
+
+
+
 
 
 
