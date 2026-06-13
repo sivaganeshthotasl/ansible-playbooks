@@ -1,0 +1,25 @@
+---
+# Install a package using a variable. Instead of hardcoding nginx, we'll store it in a variable.
+
+- name:   Nginx Package Installation
+  hosts: local # i am running this script in the local host if we want to run in a another node we define host group name which is stored in inventory file.
+  connection: local
+
+  vars:
+    PACKAGE: nginx
+
+  tasks:
+  - name: Installing Nginx Package
+    ansible.builtin.package:  # this module is used for installing package
+      name: "{{ PACKAGE }}"   # to access the package variable {{ }} 
+      state: present   # state= present means install the name of the package
+  - name: Display the Success output
+    ansible.builtin.debug:
+      msg: "{{ PACKAGE }} is Installed Successfully"
+
+
+    
+
+
+
+
