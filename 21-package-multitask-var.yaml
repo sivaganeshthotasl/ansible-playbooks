@@ -6,6 +6,7 @@
 - name: Package Management # this the name of playbook
   hosts: local
   connection: local
+  become: true
 
   vars:
     PACKAGE: nginx
