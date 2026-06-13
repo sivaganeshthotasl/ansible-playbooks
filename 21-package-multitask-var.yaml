@@ -7,7 +7,7 @@
   hosts: local
   connection: local
 
-  var:
+  vars:
     PACKAGE: nginx
 
   tasks:
@@ -21,6 +21,6 @@
       name: "{{ PACKAGE }}"
       state: started
 
-      
+
 
 
