@@ -16,6 +16,5 @@
       msg:
         - "My Name is {{ NAME }}"
         - "I Work in {{ COMPANY }}"
-        - "I live in {{ CITY }}"
+        - "This Company is Located in {{ CITY }}"
 
-        
