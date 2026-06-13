@@ -1,0 +1,20 @@
+---
+# Understand variable scope.
+
+- name: Understand Variable Scope Demo
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Task-1
+    vars:
+      NAME: Siva Ganesh Thota SL
+    ansible.builtin.debug:
+      msg: "Task-1 Var name is {{ NAME }}"
+  
+  - name: Task-2
+    ansible.builtin.debug:
+      msg: "Task2 var name is {{ NAME }}"
+
+
+      
