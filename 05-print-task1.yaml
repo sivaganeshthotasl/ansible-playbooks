@@ -1,0 +1,13 @@
+# Print Hello Siva Ganesh Thota SL using debug mode
+
+- name: Display playbook
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Displaying Hello Siva Ganesh Thota SL
+    ansible.builtin.debug:
+      msg: "Hello Siva Ganesh Thota SL"
+
+
+
