@@ -6,6 +6,7 @@
 - name: Package variable
   hosts: local
   connection: local
+  become: true
 
   vars:
     PACKAGE: git
@@ -16,4 +17,3 @@
       name: "{{ PACKAGE }}"
       state: present
 
-      
