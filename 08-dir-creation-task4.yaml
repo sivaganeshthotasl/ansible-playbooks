@@ -1,0 +1,14 @@
+# Practice Task4
+# Creating Directory using Dir module
+
+- name: Directory Creation
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Creating  a Dir 
+    ansible.builtin.dir:
+    path: /opt/project
+    state: directory
+
+    
