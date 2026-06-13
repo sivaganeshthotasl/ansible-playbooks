@@ -5,10 +5,15 @@
 - name: Deploy dev 
   hosts: local
   connection: local
- 
+
+  vars:
+    ENVIRONMENT: Dev 
   
   tasks:
   - name: Display Deploying on Dev
     ansible.builtin.debug:
       msg: "Deploying Applicaiton in {{ ENVIRONMENT }}"
 
+      
+  # you can remove varibales and if you want pass variables from the command line you can. it changes as you difined like below mentioned.
+  # ansible-playbook -i inventory.ini 18-var-deploy-task5.yaml -e "ENVIRONMENT=PROD" "ENVIRONMENT=DEV"
