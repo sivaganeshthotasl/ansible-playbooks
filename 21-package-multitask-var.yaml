@@ -1,0 +1,26 @@
+---
+
+# Install and start Package a package using the same variable
+# we are going to create a single var and use that for different tasks
+
+- name: Package Management # this the name of playbook
+  hosts: local
+  connection: local
+
+  var:
+    PACKAGE: nginx
+
+  tasks:
+  - name: Installing Nginx
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+
+  - name: Starting nginx
+    ansible.builtin.service:
+      name: "{{ PACKAGE }}"
+      state: started
+
+      
+
+
