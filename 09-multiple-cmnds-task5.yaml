@@ -7,5 +7,5 @@
 
   taks:
   - name: Executing Multiple commands
-    ansible.builtin.command:
-      cmd: uptime | date | hostname
+    ansible.builtin.command: uptime | date | hostname
+    
