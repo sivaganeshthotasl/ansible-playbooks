@@ -1,0 +1,18 @@
+---
+# Creating a Service Variable
+# Start sshd 
+
+- name: Service variable
+  hosts: local
+  connection: local
+
+  vars:
+    SERVICE: sshd
+
+  tasks:
+  - name: Start sshd
+    ansible.builtin.service:
+      name: "{{ SERVICE }}"
+      state: started
+
+      
