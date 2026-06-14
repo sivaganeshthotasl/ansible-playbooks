@@ -6,7 +6,7 @@
   connection: local
 
   vars_file:
-    - vars.yaml
+    - /ansible-playbooks/vars.yaml
   
   tasks:
   - name: Display Varaibles from var.yaml
