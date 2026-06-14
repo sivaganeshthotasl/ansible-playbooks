@@ -13,7 +13,7 @@
   tasks:
   - name: Display the user prompt
     ansible.builtin.debug: 
-      msg: "Welocome to Ansible Practice Class : {{ USER_NAME }}. We are happy to have you here"
+      msg: "Welocome to Ansible Practice Class {{ USER_NAME }}. We are happy to have you here"
 
-      
+
 
