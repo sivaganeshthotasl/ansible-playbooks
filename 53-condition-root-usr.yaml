@@ -3,6 +3,7 @@
 - name: Skipp Root User
   hosts: local
   connection: local
+  become: true
   vars:
     USERNAME: ec2-user
 
