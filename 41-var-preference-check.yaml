@@ -1,0 +1,29 @@
+# Check Which Variable type is considered as 1st
+
+- name: Variable precedence
+  hosts: local
+  connection: local
+  
+  # 1st Command line vars or extra vars this should run while playbook execute
+  # 2nd inventory vars added done
+  # 3rd Play level Vars
+  vars:
+    NAME: Play Vars
+
+
+  # 4th prompt level vars
+  vars_prompt:
+    name: NAME
+    prompt: Enter Your Name
+    private: no
+
+  # 5th task level
+
+  tasks:
+  - name: task level Vars
+    vars:
+      NAME: Task Vars
+    ansible.builtin.debug:
+      msg: "{{ NAME }}"
+      
+    
