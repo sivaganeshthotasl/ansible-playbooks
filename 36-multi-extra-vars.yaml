@@ -1,0 +1,16 @@
+# Multiple Command line Variables 
+
+- name: Employee Details 
+  hosts: local
+  connection: local
+
+
+  task:
+  - name: Display Extra Varaibles or command line Variables
+    ansible.builtin.debug:
+      msg:
+        - "This is {{ EMP_NAME }}"
+        - "I Work as a {{ ROLE }} In {{ COMPANY }}"
+
+        
+        
