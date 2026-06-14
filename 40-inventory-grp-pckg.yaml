@@ -1,0 +1,11 @@
+# Package Information
+
+- name: Package Information
+  hosts: all
+
+  tasks:
+  - name: Display Package vars from inventory group vars
+    ansible.builtin.debug:
+      msg: "Package is {{ PACKAGE }}"
+
+      
