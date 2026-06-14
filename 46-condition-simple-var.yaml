@@ -5,7 +5,7 @@
   connection: local
 
   vars:
-    ENV: QA 
+    ENV: Prod 
 
   tasks:
   - name: Production Deployment
