@@ -4,11 +4,11 @@
   hosts: local
   connection: local
 
-  vars_prompt:
-    name: ENVIRONMENT
-    prompt: Enter Environment
-    private: no
-    unsafe: false
+  vars_prompt:        # vars_prompt stops the playbook to ask the user for data at runtime
+    name: ENVIRONMENT  # This variable name will store the user's answer
+    prompt: Enter Environment   # This text appears on the user's screen as the question
+    private: no  # Displays what the user types on screen. no means its not private so user input date will be visible if yes means then it's private user input shouldn't be visible
+    unsafe: false # # Stops execution if the user hits enter without typing anything
 
   tasks:
   - name: Deploy Application
