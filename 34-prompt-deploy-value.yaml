@@ -1,0 +1,19 @@
+# Deploy Applicaion to selected Environment
+
+- name: Deployment Prompt Example
+  hosts: local
+  connection: local
+
+  vars_prompt:
+    name: ENVIRONMENT
+    prompt: Enter Environment
+    private: no
+    unsafe: false
+
+  tasks:
+  - name: Deploy Application
+    ansible.builtin.debug:
+      msg: "Deploying Appllication to {{ ENVIRONMENT }}"
+
+# What Did We Learn?
+# A single playbook can be reused across environments.
