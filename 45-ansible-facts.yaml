@@ -9,7 +9,6 @@
   - name: Display facts
     ansible.builtin.debug:
       var:
-        - "ansible_hostname"
-        - "ansible_distribution"
-        - "ansible_default_ipv4.address"
-        
+        - "{{ ansible_hostname }}"
+        - "{{ ansible_distribution }}"
+        - "{{ ansible_default_ipv4.address }}"
