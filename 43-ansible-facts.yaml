@@ -1,0 +1,14 @@
+# Display Specific Facts
+# Hostname
+
+- name: Hostname Ansible Facts Demo
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Display hostname Facts
+    ansible.builtin.debug:
+      var: "ansible_hostname"
+      
+
+  
