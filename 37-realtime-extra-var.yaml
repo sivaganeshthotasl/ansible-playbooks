@@ -1,0 +1,15 @@
+# Installing packages
+
+- name: Install Package
+  hosts: local # we can install on different servers if needed.
+  connection: local
+
+
+  tasks:
+  - name: Install Package
+    ansbile.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+  - name: display Success Status
+    ansible.builtin.debug:
+      msg: "{{ PACKAGE }} is installed Successfully"
