@@ -7,7 +7,7 @@
 
   tasks:
   - name: Install Package
-    ansbile.builtin.package:
+    ansible.builtin.package:
       name: "{{ PACKAGE }}"
       state: present
   - name: Display Success status  
