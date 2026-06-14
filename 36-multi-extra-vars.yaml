@@ -5,12 +5,12 @@
   connection: local
 
 
-  task:
+  tasks:
   - name: Display Extra Varaibles or command line Variables
     ansible.builtin.debug:
       msg:
         - "This is {{ EMP_NAME }}"
         - "I Work as a {{ ROLE }} In {{ COMPANY }}"
 
-        
+
         
