@@ -1,0 +1,15 @@
+# Display hostname, distribution, and ipv4 address
+
+- name: Display Hostname, distribution, ipv4
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: Display facts
+    ansible.builtin.debug:
+      var:
+        - "ansible_hostname"
+        - "ansible_distribution"
+        - "ansible_default_ipv4.address"
+        
