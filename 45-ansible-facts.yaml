@@ -8,7 +8,7 @@
   tasks:
   - name: Display facts
     ansible.builtin.debug:
-      var:
+      msg:
         - "{{ ansible_hostname }}"
         - "{{ ansible_distribution }}"
         - "{{ ansible_default_ipv4.address }}"
