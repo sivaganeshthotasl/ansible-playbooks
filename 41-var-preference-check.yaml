@@ -22,11 +22,11 @@
   # 5th task level
 
   tasks:
-  - name: task level Vars
-    vars:
-      NAME: Task Vars
-    ansible.builtin.debug:
-      msg: "{{ NAME }}"
+  # - name: task level Vars
+  #   vars:
+  #     NAME: Task Vars
+  #   ansible.builtin.debug:
+  #     msg: "{{ NAME }}"
 
   - name: display name
     ansible.builtin.debug:
@@ -39,5 +39,10 @@
 # ansible-playbook -i inventory.ini 41-var-preference-check.yaml
 # Second Execution is success while we ran we got prompt once we given got the task level vars results
 # so Second winner is Task level
+
+# Third
+# task level
+
+# Fourth Prompt
 
 
