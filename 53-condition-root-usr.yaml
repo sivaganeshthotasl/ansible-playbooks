@@ -5,7 +5,7 @@
   connection: local
   become: true
   vars:
-    USERNAME: ec2-user
+    USERNAME: root
 
   tasks:
   - name: Normal user log in
