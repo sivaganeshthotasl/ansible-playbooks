@@ -11,4 +11,5 @@
       msg: " This is {{ NAME }}"
 
 # to run this ansbible-playbook -i inventory 35-command-line-var.yaml -e "NAME=SivaGaneshThotaSL"
-# # -e means "extra variables". It forces a change without editing the file.
+# # -e means "extra variables". It forces a change without editing the file. -e is called an Extra Variable or Command Line Variable. 
+
