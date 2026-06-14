@@ -8,7 +8,17 @@
   tasks:
   - name: Display hostname Facts
     ansible.builtin.debug:
-      msg: "ansible_hostname"
+      var: "ansible_hostname"
+
+
+# Rules to Remember
+# var: ansible_hostname --> print variable value directly 
+# msg: "ansible_hostname" --> Print plain text
+# msg: "{{ ansible_hostname }}" --> Print variable value inside a message
+
+
+
+
 
 
   
