@@ -9,6 +9,7 @@
   - name: Display hostname Facts
     ansible.builtin.debug:
       var: "ansible_hostname"
+      msg: "{{ ansible_hostname }}"
 
 
 # Rules to Remember
