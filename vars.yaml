@@ -2,11 +2,9 @@
 
 # Store Variables here
 
-- name: Variables
-  vars:
-    NAME: Siva Ganesh Thota SL
-    COMPANY: BENZ
-    CITY: Singapore
+NAME: Siva Ganesh Thota SL
+COMPANY: BENZ
+CITY: Singapore
 
   
 
