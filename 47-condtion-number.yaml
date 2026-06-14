@@ -1,0 +1,14 @@
+# Number Comparision
+
+- name: Check Memory Values
+  hosts: local
+  connection: local
+
+  vars:
+    MEMORY: "6"
+
+  tasks:
+  - name: High Memory Server
+    ansible.builtin.debug:
+      msg: "Server has enough Memory"
+    when: MEMORY >= 6
