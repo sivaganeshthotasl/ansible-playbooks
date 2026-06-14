@@ -1,0 +1,18 @@
+# Use or Import App deploy var from vars.yaml
+
+
+- name: Deploy App
+  hosts: local
+  connection: local
+
+  vars_files:
+    - vars.yaml
+
+  taks:
+  - name: Display Deploy App vars
+    ansible.builtin.debug:
+      msg: 
+        - "Applicaton: {{ APP_NAME }}"
+        - "Version: {{ APP_VERSION }}"
+        - "Port: {{ PORT }}"
+        - "Environment: {{ ENVIRONMENT }}"
