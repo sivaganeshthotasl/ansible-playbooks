@@ -1,7 +1,7 @@
 # Instead of assigning variables to each host, assign them to a group.
 
 - name: Group variables Demo
-  hosts: servers
+  hosts: web
 
 
   tasks:
