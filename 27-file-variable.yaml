@@ -1,0 +1,18 @@
+---
+# Accessing File variables
+
+- name: File Varaibles Example
+  hosts: local
+  connection: local
+
+  vars_file:
+    - variables.yaml
+  
+  tasks:
+  - name: Display Varaibles from var.yaml
+    ansible.builtin.debug:
+      msg:
+        - "This is {{ NAME }}"
+        - "I work in {{ COMPANY }}"
+        - "I live in {{ CITY }}"
+        

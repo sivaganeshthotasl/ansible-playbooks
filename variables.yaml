@@ -1,0 +1,12 @@
+---
+
+# Store Variables here
+
+- name: Variables
+  var:
+    NAME: Siva Ganesh Thota SL
+    COMPANY: BENZ
+    LOCAION: Singapore
+
+  
+
