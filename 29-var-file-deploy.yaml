@@ -8,7 +8,7 @@
   vars_files:
     - vars.yaml
 
-  taks:
+  tasks:
   - name: Display Deploy App vars
     ansible.builtin.debug:
       msg: 
@@ -16,3 +16,6 @@
         - "Version: {{ APP_VERSION }}"
         - "Port: {{ PORT }}"
         - "Environment: {{ ENVIRONMENT }}"
+
+# What Did We Learn?
+# This is how many real projects organize variables.
