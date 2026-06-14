@@ -10,6 +10,7 @@
     ansbile.builtin.package:
       name: "{{ PACKAGE }}"
       state: present
+  - name: Display Success status  
     ansible.builtin.debug:
       msg: "{{ PACKAGE }} is installed Successfully"
 
