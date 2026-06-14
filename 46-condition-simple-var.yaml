@@ -1,0 +1,15 @@
+# Simple Variable Condition
+
+- name: Condition Variable
+  hosts: local
+  connection: local
+
+  vars:
+    ENV: Prod 
+
+  tasks:
+  - name: Production Deployment
+    ansible.builtin.debug:
+      msg: "Deploying Application"
+    when: ENV == "Prod"
+    
