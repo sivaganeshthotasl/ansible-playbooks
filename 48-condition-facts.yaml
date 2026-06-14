@@ -1,0 +1,11 @@
+# Condition Using Facts
+
+- name: Condition facts
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Display Redhat Linux Server
+    ansible.builtin.debug:
+      var: "ansible_distribution"
+      
