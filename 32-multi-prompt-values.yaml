@@ -8,7 +8,6 @@
     - name: EMP_NAME
       prompt: Enter Employee NAME
       private: no
-      name: COMPANY
     - name: COMPANY
       prompt: Enter Company Name
       private: no
@@ -19,6 +18,6 @@
       msg: 
         - "Employee: {{ EMP_NAME }}"
         - "Company: {{ COMPANY }}"
-        
+
 
   
