@@ -4,8 +4,8 @@
   hosts: local
   connection: local
   vars:
-    ENV: APACHE
-    APP: APACHE
+    ENV: PROD 
+    APP: nginx
 
   tasks:
   - name: Deploy Application
