@@ -1,0 +1,9 @@
+# View All Facts in a playbook
+- name: All Facts
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Display All Facts
+    ansible.builtin.debug:
+      var: ansible_facts
