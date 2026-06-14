@@ -13,7 +13,7 @@
     ansible.builtin.package:
       name: "{{ PACKAGE }}"
       state: present
-    when: ansible_distribution == "Redhat"
+    when: ansible_distribution == "Red Hat Enterprise Linux"
 
 
 
