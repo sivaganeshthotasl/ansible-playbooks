@@ -18,6 +18,7 @@
   tasks:
   - name: Display Password Recieved Successfully
     ansible.builtin.debug:
-      msg: "Password Recieved Successfully"
+      msg: "{{ DB_PASSWD }} Password Recieved Successfully"  # if you want to see the password that is given by user you can access that DB_PASSWD.it's just for validate not for realtime practice.
+
 
   
