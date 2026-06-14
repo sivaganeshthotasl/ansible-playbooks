@@ -8,7 +8,7 @@
   vars_prompt:  # this is used for read user input. in shell script we used read -p "prompt" <varname>
     name: USER_NAME
     prompt: Enter Your Name
-    private: no
+    private: no  # whether inpurt is visible or not
 
   tasks:
   - name: Display the user prompt
