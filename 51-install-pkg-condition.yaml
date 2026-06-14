@@ -1,0 +1,19 @@
+# Package Installation Based on OS
+
+- name: Install package based on OS
+  hosts: local
+  connection: local
+  become: true
+
+  vars:
+    PACKAGE: httpd
+
+  tasks:
+  - name: Installing Package
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+    when: ansible_distribution == "Redhat"
+
+
+
