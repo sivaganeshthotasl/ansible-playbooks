@@ -1,0 +1,18 @@
+# Ask the user for a name and print given input by user
+
+- name: Prompt Variable Demo
+  hosts: local
+  connection: local
+
+
+  vars_prompt:
+    name: USER_NAME
+    prompt: Enter Your Name
+    private: no
+
+  tasks:
+  - name: Display the user prompt
+    ansible.builtin.debug: 
+      msg: "User name is : {{ USER_NAME }}"
+
+      
