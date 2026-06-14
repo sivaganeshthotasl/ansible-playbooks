@@ -5,11 +5,10 @@
   connection: local
 
   vars:
-    ENV: Prod 
+    ENV: QA 
 
   tasks:
   - name: Production Deployment
     ansible.builtin.debug:
       msg: "Deploying Application"
     when: ENV == "Prod"
-    
