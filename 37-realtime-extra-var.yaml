@@ -3,6 +3,7 @@
 - name: Install Package
   hosts: local # we can install on different servers if needed.
   connection: local
+  become: true
 
 
   tasks:
