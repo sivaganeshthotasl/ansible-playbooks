@@ -8,8 +8,8 @@
   tasks:
   - name: Display hostname Facts
     ansible.builtin.debug:
-      # var: "ansible_hostname"
-      msg: "{{ ansible_hostname }}"
+      var: "ansible_hostname"
+      
 
 
 # Rules to Remember
