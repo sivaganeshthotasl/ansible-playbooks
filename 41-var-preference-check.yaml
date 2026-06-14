@@ -25,5 +25,9 @@
       NAME: Task Vars
     ansible.builtin.debug:
       msg: "{{ NAME }}"
-      
-    
+
+# first
+# ansible-playbook -i inventory.ini 41-var-preference-check.yaml -e "NAME=Siva Ganesh Thota SL"
+# first execution is success so first winner is Command line vars
+
+# Second
