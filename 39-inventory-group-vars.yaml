@@ -1,0 +1,10 @@
+# Instead of assigning variables to each host, assign them to a group.
+
+- name: Group variables Demo
+  hosts: servers
+
+
+  taks:
+  - name: Display Group vars
+    ansible.builtin.debug:
+      msg: "Install {{ PACKAGE }} On Port {{ PORT }}"
