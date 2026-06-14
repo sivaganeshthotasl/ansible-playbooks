@@ -8,7 +8,7 @@
   tasks:
   - name: Display facts
     ansible.builtin.debug:
-      msg:
+      msg:     # to list all the facts we use msg: instead var: here we used {{ }} brases to access the facts.
         - "{{ ansible_hostname }}"
         - "{{ ansible_distribution }}"
         - "{{ ansible_default_ipv4.address }}"
