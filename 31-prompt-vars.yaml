@@ -5,10 +5,10 @@
   connection: local
 
 
-  vars_prompt:  # this is used for read user input. in shell script we used read -p "prompt" <varname>
-    name: USER_NAME
-    prompt: Enter Your Name
-    private: no  # whether inpurt is visible or not
+  vars_prompt:  ## vars_prompt stops the playbook to ask the user for data at runtime in shell script we used read -p "prompt" <varname>
+    name: USER_NAME # # This variable name will store the user's answer
+    prompt: Enter Your Name # This text appears on the user's screen as the question
+    private: no  # Displays what the user types on screen. no means its not private so user input date will be visible if yes means then it's private user input shouldn't be visible
 
   tasks:
   - name: Display the user prompt

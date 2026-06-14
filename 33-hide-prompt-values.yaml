@@ -1,0 +1,18 @@
+# Hide Sensitive Information
+
+- name: Password Prompt  # this is the name of playbook
+  hosts: local # runs it in the local host
+  connection: local
+
+  vars_prompt:   # vars_prompt stops the playbook to ask the user for data at runtime
+    name: DB_PASSWD
+    prompt: Enter Your DB Password
+    private: yes
+    unsafe: false
+
+  tasks:
+  - name: Display Password Recieved Successfully
+    ansible.builtin.debug:
+      msg: "Password Recieved Successfully"
+
+  
