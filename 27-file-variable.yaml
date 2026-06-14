@@ -5,8 +5,8 @@
   hosts: local
   connection: local
 
-  vars_file:
-    - /ansible-playbooks/vars.yaml
+  vars_files:
+    - vars.yaml
   
   tasks:
   - name: Display Varaibles from var.yaml
