@@ -1,0 +1,13 @@
+# skipp root user
+
+- name: Skipp Root User
+  hosts: local
+  connection: local
+  vars:
+    USERNAME: ec2-user
+
+  tasks:
+  - name: Normal user log in
+    ansible.builtin.debug:
+      msg:  "User Allowed"
+    when: USERNAME != "root"
