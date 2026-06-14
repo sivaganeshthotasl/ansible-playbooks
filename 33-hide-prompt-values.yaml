@@ -5,10 +5,15 @@
   connection: local
 
   vars_prompt:   # vars_prompt stops the playbook to ask the user for data at runtime
-    name: DB_PASSWD
-    prompt: Enter Your DB Password
-    private: yes
-    unsafe: false
+    - name: DB_USER
+      promt: Enter DB User Name
+      private: no
+      unsafe: false
+
+    - name: DB_PASSWD
+      prompt: Enter Your DB Password
+      private: yes
+      unsafe: false
 
   tasks:
   - name: Display Password Recieved Successfully
