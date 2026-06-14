@@ -1,0 +1,24 @@
+# Ask for Multi Values
+
+- name: Employee Details
+  hosts: local
+  connection: local
+
+  vars_prompt:
+    - name: EMP_NAME
+      prompt: Enter Employee NAME
+      private: no
+      name: COMPANY
+    - name: COMPANY
+      prompt: Enter Company Name
+      private: no
+
+  tasks:
+  - name: Display Employee Details
+    ansible.builtin.debug:
+      msg: 
+        - "Employee: {{ EMP_NAME }}"
+        - "Company: {{ COMPANY }}"
+        
+
+  
