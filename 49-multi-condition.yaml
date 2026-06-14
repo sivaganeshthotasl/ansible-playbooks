@@ -1,0 +1,17 @@
+# Create Multiple Conditions
+
+- name: Multiple Conditions (and)
+  hosts: local
+  connection: local
+  vars:
+    ENV: Prod
+    APP: nginx
+
+  tasks:
+  - name: Deploy Application
+    ansible.builtin.debug:
+      msg:  "Deploying {{ APP }} in {{ ENV }}"
+
+    when: 
+      - ENV == "Prod"
+      - APP == "nginx"
