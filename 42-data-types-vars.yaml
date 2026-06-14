@@ -1,0 +1,51 @@
+# Variable Data Types
+
+- name: Variable Data Types Demo
+  hosts: local
+  connection: local
+
+  vars:
+    NAME: Siva Ganesh Thota SL   # This is String Variable
+    COMPANY: Benz   
+    AGE: "30"                    # Number or Integier Variables
+    DOB: "1995"
+    PORT: "80"
+    PACKAGES:                    # List Variables
+      - nginx
+      - git
+      - docker
+      - mysql
+    EMPLOYEE:         # Dictionary or map variables
+      NAME: Siva
+      ROLE: DevSecOps
+      ID: "1356"
+    IS_ADMIN: true      # Boolean Var
+
+    tasks:
+    - name: display String Vars
+      ansible.builtin.debug:
+      msg: "This is {{ NAME }} and Working in {{ COMPANY }}"
+
+    - name: Display Number Vars
+      ansible.builtin.debug:
+        msg: "Born in {{ DOB }} And My Age is {{ AGE }}"
+
+    - name: Display List Vars
+      ansible.builtin.debug:
+        msg: " PACKAGES are {{ PACKAGES }}"
+
+    - name: Display Dictionary Vars
+      ansbible.builtin.debug:
+        msg: "Employee Infromation details are  {{ EMPLOYEE }}"
+
+    - name: Display Boolean var
+      ansible.builtin.debug:
+        msg: "is Admin: {{ IS_ADMIN }}"
+
+        
+
+
+
+
+
+
