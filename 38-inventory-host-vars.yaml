@@ -1,0 +1,12 @@
+# Inventory Host Variables
+
+- name: Host Variables Demo
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Display Server ROLE
+    ansible.builtin.debug:
+      msg: "Server Role is {{ SERVER_ROLE }}"
+
+
