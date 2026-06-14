@@ -7,8 +7,8 @@
   # 1st Command line vars or extra vars this should run while playbook execute
   # 2nd inventory vars added done
   # 3rd Play level Vars
-  vars:
-    NAME: PlayVars
+  # vars:
+  #   NAME: PlayVars
 
 
   # 4th prompt level vars
@@ -47,6 +47,9 @@
 # Prompt
 
 # 6th
+# Play Vars
 
 
+# 7th
+#
 
