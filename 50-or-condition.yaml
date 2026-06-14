@@ -1,0 +1,14 @@
+# OR Condition
+
+- name: OR Condition
+  hosts: local
+  connection: local
+
+  vars:
+    ENV: UAT
+
+  tasks:
+  - name: Non-Production Deployment
+    ansible.builtin.debug:
+      msg: "Deploying"
+    when: ENV == "DEV" or ENV == "UAT"
