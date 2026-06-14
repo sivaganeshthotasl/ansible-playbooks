@@ -13,6 +13,5 @@
   tasks:
   - name: Display the user prompt
     ansible.builtin.debug: 
-      msg: "User name is : {{ USER_NAME }}"
+      msg: "Welocome to Ansible Practice Class : {{ USER_NAME }}"
 
-      
