@@ -17,6 +17,8 @@
     prompt: Enter Your Name
     private: no
 
+  
+
   # 5th task level
 
   tasks:
@@ -26,7 +28,7 @@
     ansible.builtin.debug:
       msg: "{{ NAME }}"
 
-  - name: display play level
+  - name: display name
     ansible.builtin.debug:
       msg: "{{ NAME }}"
 # first
