@@ -1,0 +1,20 @@
+---
+# use or import a package var from vars.yaml
+
+- name: package installation
+  hosts: local
+  connection: local
+  become: true
+
+  vars_files:
+    - var.yaml
+
+  tasks:
+  - name: Installing Package
+    ansible.builtin.package:
+      name: "{{ PACKAGE }}"
+      state: present
+  - name: Display Installation Success
+    ansible.builtin.debug:
+      msg: "{{ PACKAGE }} Installed Successfully"
+      
