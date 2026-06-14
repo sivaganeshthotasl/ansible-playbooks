@@ -1,0 +1,12 @@
+# Check Hostname
+
+- name: Check Hostname
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Execute only on Web servers
+    ansible.builtin.debug:
+      msg: "This is Web Server"
+    when: ansible_hostname == "web01"
+    
