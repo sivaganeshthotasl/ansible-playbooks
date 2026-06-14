@@ -5,7 +5,7 @@
   connection: local
 
 
-  vars_prompt:
+  vars_prompt:  # this is used for read user input. in shell script we used read -p "prompt" <varname>
     name: USER_NAME
     prompt: Enter Your Name
     private: no
@@ -16,4 +16,9 @@
       msg: "Welocome to Ansible Practice Class {{ USER_NAME }}. We are happy to have you here"
 
 
+
+# What Did We Learn?
+# Taking user input.
+# Storing input in variables.
+# Using input later.
 
