@@ -4,7 +4,7 @@
   hosts: servers
 
 
-  taks:
+  tasks:
   - name: Display Group vars
     ansible.builtin.debug:
       msg: "Install {{ PACKAGE }} On Port {{ PORT }}"
