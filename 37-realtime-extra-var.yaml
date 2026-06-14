@@ -23,3 +23,8 @@
 
 # Install Mysql
 # ansible-playbook -i inventory.ini 37-realtime-extra-var.yaml -e "PACKAGE=mysql"
+
+
+
+# what did we learn?
+# Same playbook, Installing different package. 
