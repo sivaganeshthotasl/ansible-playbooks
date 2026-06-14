@@ -13,5 +13,5 @@
       msg:  "Deploying {{ APP }} in {{ ENV }}"
 
     when: 
-      - ENV == "Prod"
+      - ENV == "PROD"
       - APP == "nginx"
