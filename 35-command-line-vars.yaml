@@ -1,0 +1,14 @@
+# Command line Variables example
+
+- name: extra variable Demo
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: Display command line Executed Variable
+    ansible.builtin.debug:
+      msg: " This is {{ NAME }}"
+
+# to run this ansbible-playbook -i inventory 35-command-line-var.yaml -e "NAME=SivaGaneshThotaSL"
+# # -e means "extra variables". It forces a change without editing the file.
