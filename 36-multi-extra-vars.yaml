@@ -13,4 +13,7 @@
         - "I Work as a {{ ROLE }} In {{ COMPANY }}"
 
 
+# to run this playbook ansible-playbook -i inventory.ini 36-multi-extra-vars.yaml -e "EMP_NAME=SivaGaneshThota" -e "ROLE=DevSecOps" -e "COMPANY=Benz"
+
+
         
