@@ -13,3 +13,12 @@
   - name: display Success Status
     ansible.builtin.debug:
       msg: "{{ PACKAGE }} is installed Successfully"
+
+# Install nginx
+# ansible-playbook -i inventory.ini 37-realtime-extra-var.yaml -e "PACKAGE=nginx"
+
+# Install Apache
+# ansible-playbook -i inventory.ini 37-realtime-extra-var.yaml -e "PACKAGE=httpd"
+
+# Install Mysql
+# ansible-playbook -i inventory.ini 37-realtime-extra-var.yaml -e "PACKAGE=mysql"
