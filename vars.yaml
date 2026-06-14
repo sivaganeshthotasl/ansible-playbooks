@@ -11,6 +11,7 @@ APP_NAME: nginx
 APP_VERSION: "1.25"
 PORT: "80"
 ENVIRONMENT: Dev 
+DB_PACKAGE: mongodb-org 
 
 
 

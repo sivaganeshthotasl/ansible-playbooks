@@ -1,0 +1,27 @@
+# Create two saperate playbooks and access different variable files.
+
+
+- name: Web play
+  hosts: local
+  connection: local
+
+  vars_files:     # it is used to access variables from saperate file. Variables stored in separate files and loaded using: vars_files
+    - web-app-var.yaml
+
+  tasks:
+  - name: Display Web play var
+    ansible.builtin.debug:
+      msg: "Going to Install {{ PACKAGE }}"
+
+
+- name: DB play
+  hsots: local
+  connection: local
+
+  vars_files:
+    - db-var.yaml
+
+  tasks:
+  - name: Display DB play var
+    ansible.builtin.debug:
+      msg: "Going to Install {{ PACKAGE }}"
