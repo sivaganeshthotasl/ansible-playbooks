@@ -11,4 +11,4 @@
   - name: High Memory Server
     ansible.builtin.debug:
       msg: "Server has enough Memory"
-    when: MEMORY >= 6
+    when: MEMORY >=6
