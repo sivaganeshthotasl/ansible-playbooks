@@ -1,0 +1,13 @@
+# Conditon With Number
+- name: Age Verification
+  hosts: local
+  connection: local
+
+  vars:
+    AGE: "30"
+  tasks:
+  - name: Elgible
+    ansible.builtin.debug:
+      msg: "Elgible to Voter Apply"
+    when: AGE >= 18
+
