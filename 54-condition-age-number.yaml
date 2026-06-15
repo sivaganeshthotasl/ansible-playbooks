@@ -9,5 +9,5 @@
   - name: Elgible
     ansible.builtin.debug:
       msg: "Elgible to Voter Apply"
-    when: AGE >= 18
+    when: AGE | int >= 18
 
