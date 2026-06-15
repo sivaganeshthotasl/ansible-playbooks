@@ -1,0 +1,17 @@
+# File Exist Check
+
+- name: Check file Exist
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: check file
+    stat:
+      path: /tmp/ansible.txt
+    register: file_status
+  - name: Display Message
+    ansible.builtin.debug: 
+      msg: "File Exist"
+
+    when: file_status.stat.exists
+
