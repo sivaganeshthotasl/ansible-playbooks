@@ -1,0 +1,15 @@
+# Disk Usage Check
+
+- name: Check Disk Usage
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Get Disk Usage
+    shell: df -h / | awk 'NR=2 {print $5}' | tr -d '%'
+    register: Disk_Usage
+
+  - name: alert
+    ansible.builtin.debug:
+      msg: "Disk Usage Exeeded 1%"
+    when: Disk_Usage.stdout | int > 1
