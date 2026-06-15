@@ -1,0 +1,14 @@
+# # Check Uptime using register var
+
+- name: Register Example
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: check Uptime
+    ansible.builtin.command: Uptime
+    register: UPTIME_OUTPUT
+  - name: Display the output
+    ansible.builtin.debug:
+      var: "UPTIME_OUTPUT.stdout"
