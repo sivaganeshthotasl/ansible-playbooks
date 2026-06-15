@@ -1,0 +1,13 @@
+# Check Disk Usage
+
+- name: Disk Usage
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Run Disk Usage command
+    ansible.builtin.command: df -hT 
+    register: DISK_USAGE 
+  - name: Display the output of Disk Usage
+    ansible.builtin.debug:
+      var: "DISK_USAGE.stdout"
