@@ -1,0 +1,18 @@
+# Check Package Length
+
+- name: Package Length
+  hosts: local
+  connection: local
+
+  vars:
+    PACKAGES:
+      - git
+      - wget
+      - curl
+
+
+
+  tasks:
+  - name: check package Length
+    ansible.builtin.debug:
+      msg: "{{ PACKAGES | length }}"
