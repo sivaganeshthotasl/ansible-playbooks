@@ -1,0 +1,17 @@
+# Loop Condition
+
+- name: Condition Loop
+  hosts: local
+  connection: local
+
+  vars:
+    PACKAGES:
+      - nginx
+      - git
+      - tree
+  tasks:
+  - name: Display nginx only
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    loop: "{{ PACKGES }}"
+    when: item == "nginx"
