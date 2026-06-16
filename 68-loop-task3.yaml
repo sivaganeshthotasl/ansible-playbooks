@@ -1,0 +1,27 @@
+# Install Packages
+
+- name: Install Packages
+  hosts: local
+  connection: local
+  become: true
+  
+
+  tasks:
+  - name: removing Package
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: absent
+    loop:
+      - git 
+      - wget
+      - tree
+  - name: Installing Package
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - git
+      - wget
+      - tree
+
+
