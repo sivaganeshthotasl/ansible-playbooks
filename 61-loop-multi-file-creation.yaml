@@ -7,11 +7,10 @@
 
   tasks:
   - name: Create files
-    ansible.builtin.file:
-      path: /tmp/{{ item }}
+    ansible.builtin.file:  # this mudule is used to create file
+      path: /tmp/{{ item }}  # item is used to take values one by one from loop:
       state: touch
     loop:
       - app.log
       - web.log
       - db.log
-      
