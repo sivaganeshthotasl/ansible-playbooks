@@ -10,4 +10,4 @@
   tasks:
   - name: Replace Names
     ansible.builtin.debug:
-      msg: "{{ NAME | replace('Ganesh','Siva') }}"
+      msg: "{{ NAME | replace('Ganesh','Thota') }}"
