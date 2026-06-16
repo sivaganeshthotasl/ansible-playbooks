@@ -1,0 +1,16 @@
+# Remove Multiple packages
+
+- name: Remove Multiple Packages
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: remove installed packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: absent
+    loop:
+      - nginx
+      - git
+      - wget
+      - tree
