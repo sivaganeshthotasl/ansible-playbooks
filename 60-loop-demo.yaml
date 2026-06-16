@@ -1,0 +1,16 @@
+# Loop Example
+- name: Loop Example
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: Display loop names
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}"
+
+    loop:
+      - Siva
+      - Ganesh
+      - Thota
+      - SL
