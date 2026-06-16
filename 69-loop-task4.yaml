@@ -3,6 +3,7 @@
 - name: Create users
   hosts: local
   connection: local
+  become: true
 
   vars:
     USERS:
