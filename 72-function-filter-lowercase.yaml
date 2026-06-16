@@ -1,0 +1,13 @@
+# Change to Lower case
+
+- name: localhost
+  hosts: local
+  connection: local
+
+  vars:
+    NAME: SIVA 
+
+  tasks: 
+  - name: change to lower case
+    ansible.builtin.debug:
+      msg: "{{ NAME | lower }}"
