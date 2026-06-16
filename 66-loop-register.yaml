@@ -4,6 +4,7 @@
 - name: Check Multiple files
   hosts: local
   connection: local
+  become: true
 
   tasks:
   - name: Check files
