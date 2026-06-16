@@ -14,4 +14,4 @@
     ansible.builtin.debug:
       msg: "{{ item }}"
     loop: "{{ PACKAGES }}"
-    when: item == "nginx"
+    when: item == "nginx" "git"
