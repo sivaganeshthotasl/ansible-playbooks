@@ -3,6 +3,7 @@
 - name: Remove Multiple Packages
   hosts: local
   connection: local
+  become: true
 
   tasks:
   - name: remove installed packages
