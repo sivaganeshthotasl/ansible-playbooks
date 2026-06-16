@@ -1,0 +1,13 @@
+# Split Variables
+
+- name: Variable Split
+  hosts: local
+  connection: local
+
+  vars:
+    CITIES: "HYD,BLR,VJWD"
+
+  tasks:
+  - name: Split
+    ansible.builtin.debug:
+      msg: "{{ CITIES | split(',') }}"
