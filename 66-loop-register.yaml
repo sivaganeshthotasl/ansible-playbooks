@@ -1,0 +1,21 @@
+# Loop + Register
+# Suppose you want to check whether mutiple files are created or not we can check the status 
+
+- name: Check Multiple files
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Check files
+    ansible.builtin.file:
+      path: /tmp/{{ item }}
+      state: touch
+    loop:
+      - ansible1.txt
+      - ansible2.txt
+      - ansible3.txt
+    register: FILE_STATUS
+
+  - name: Display output
+    ansible.builtin.debug:
+      var: FILE_STATUS
