@@ -1,0 +1,17 @@
+# display loop variables
+
+- name: Display loop vars
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Print Loop vars
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    loop:
+      - Bangalore
+      - Hyderabad
+      - Chennai
+      - Mumbai
+      
+
