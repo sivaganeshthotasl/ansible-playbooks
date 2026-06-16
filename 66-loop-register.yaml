@@ -8,14 +8,14 @@
   tasks:
   - name: Check files
     ansible.builtin.file:
-      path: /tmp/{{ item }}
+      path: "{{ item }}"
       state: touch
     loop:
-      - ansible1.txt
-      - ansible2.txt
-      - ansible3.txt
+      - /opt/ansible1.txt
+      - /opt/ansible2.txt
+      - /opt/ansible3.txt
     register: FILE_STATUS
 
   - name: Display output
     ansible.builtin.debug:
-      msg: "{{ FILE_STATUS }}"
+      var: "{{ FILE_STATUS.results }}"
