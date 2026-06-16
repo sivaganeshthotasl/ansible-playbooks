@@ -1,0 +1,17 @@
+# Loop with Variables.
+
+- name: Variable loop
+  hosts: local
+  connection: local
+
+  vars:
+    PACKAGES:
+      - nginx
+      - git
+      - tree
+
+  tasks:
+  - name: Display Packages
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    loop: "{{ PACKAGES }}"
