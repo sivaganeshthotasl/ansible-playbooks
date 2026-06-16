@@ -1,0 +1,18 @@
+# loop variable
+
+- name: Create users
+  hosts: local
+  connection: local
+
+  vars:
+    USERS:
+      - devuser
+      - testuser
+      - appuser
+
+  tasks:
+  - name: Creating users
+    ansible.builtin.user:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ USERS }}"
