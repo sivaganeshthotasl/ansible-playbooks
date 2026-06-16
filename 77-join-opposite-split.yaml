@@ -1,0 +1,16 @@
+# Opposite of split
+
+- name: join
+  hosts: local
+  connection: local
+
+  vars:
+    CITIES:
+      - HYD
+      - BLR
+      - VJWD
+
+  tasks:
+  - name: join vars
+    ansible.builtin.debug:
+      msg: "{{ CITIES | join(',') }}"
