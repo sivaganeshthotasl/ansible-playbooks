@@ -1,4 +1,4 @@
-# if app is exist print it. if not exist use nginx 
+# if app is exist print it. if not exist use default nginx app
 
 - name: Display app
   hosts: local
@@ -9,4 +9,3 @@
   - name: Display App
     ansible.builtin.debug:
       msg: "{{ APP | default('nginx') }}"
-      
