@@ -1,0 +1,13 @@
+# Replace Names
+
+- name: Name Replaces
+  hosts: local
+  connection: local
+
+  vars:
+    NAME: Siva Ganesh
+
+  tasks:
+  - name: Replace Names
+    ansible.builtin.debug:
+      msg: "{{ NAME | replace SIVA GANAESH THOTA SL }}"
