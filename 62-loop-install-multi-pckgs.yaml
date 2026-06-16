@@ -1,0 +1,19 @@
+# Install Multip Packages using loop
+
+- name: Package Installation
+  hosts: local
+  connection: local
+
+
+  tasks:
+  - name: Install Packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+
+    loop:
+      - nginx
+      - git
+      - wget
+      - tree
+      
