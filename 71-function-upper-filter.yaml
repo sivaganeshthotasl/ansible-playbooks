@@ -1,0 +1,13 @@
+# Upper Function
+
+- name: Upper Function
+  hosts: local
+  connection: local
+
+
+  vars:
+    NAME: siva 
+  tasks:
+  - name: Change to Upper Case
+    ansible.builtin.debug:
+      msg: "{{ NAME | upper }}"
