@@ -3,6 +3,7 @@
 - name: Package Installation
   hosts: local
   connection: local
+  become: true
 
 
   tasks:
@@ -16,4 +17,3 @@
       - git
       - wget
       - tree
-      
