@@ -3,6 +3,7 @@
 - name: file creation
   hosts: local
   connection: local
+  become: true
 
   tasks:
   - name: Create files
@@ -13,4 +14,3 @@
       - file1.txt
       - file2.txt
       - file3.txt
-      
