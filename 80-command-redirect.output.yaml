@@ -3,14 +3,13 @@
 - name: Redirect Output using command
   hosts: local
   connection: local
-  become: true
 
   tasks:
-  # - name: Redirect output
-  #   ansible.builtin.command: "date > /tmp/date/.txt"
+  - name: Redirect output
+    ansible.builtin.command: "date > /tmp/date.txt"
 
   - name: Redirect output
-    ansible.builtin.shell: "date > /tmp/date/.txt"
+    ansible.builtin.shell: "date > /tmp/date.txt"
 
 
 
