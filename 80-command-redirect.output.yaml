@@ -1,0 +1,20 @@
+# Redirect Output
+
+- name: Redirect Output using command
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Redirect output
+    ansible.builtin.command: "date > /tmp/date/.txt"
+    
+
+
+
+
+
+
+
+
+
+
