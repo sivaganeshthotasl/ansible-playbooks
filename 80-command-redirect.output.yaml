@@ -7,8 +7,9 @@
   tasks:
   - name: Redirect output
     ansible.builtin.command: "date > /tmp/date/.txt"
-    
 
+  - name: Redirect output
+    ansible.builtin.shell: "date > /tmp/date/.txt"
 
 
 
