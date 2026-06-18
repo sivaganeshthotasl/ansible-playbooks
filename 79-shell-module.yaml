@@ -1,0 +1,10 @@
+# shell Module
+
+- name: shell module
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: check disk using shell module
+    ansible.builtin.shell: "df -h | grep /"
+      
