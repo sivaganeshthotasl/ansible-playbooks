@@ -1,0 +1,14 @@
+# Command Example
+- name: Command vs shell Demo
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Check date
+    ansible.builtin.command: date
+    register: DATE 
+  - name: Display the DATE output
+    ansible.builtin.debug:
+      var: DATE.stdout
+
+      
