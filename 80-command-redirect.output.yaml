@@ -3,6 +3,7 @@
 - name: Redirect Output using command
   hosts: local
   connection: local
+  become: true
 
   tasks:
   # - name: Redirect output
