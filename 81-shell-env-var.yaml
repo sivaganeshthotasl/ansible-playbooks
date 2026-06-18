@@ -5,8 +5,8 @@
   connection: local
 
   tasks:
-  - name: check env var
-    ansible.builtin.command: "echo $HOME"
+  # - name: check env var
+  #   ansible.builtin.command: "echo $HOME"
 
   - name: Check in shell
     ansible.builtin.shell: "echo $HOME"
